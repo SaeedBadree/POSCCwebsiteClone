@@ -1,0 +1,80 @@
+:root {
+    --primary-color: #002855;
+    --secondary-color: #f8f8f8;
+    --accent-color: #ffc107;
+    --text-color: #333;
+    --background-color: #ffffff;
+    --border-color: #d1d1d1;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Header Section */
+.department-header {
+    background: var(--primary-color);
+    color: var(--background-color);
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.department-header-content h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.department-header-content p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Content Sections */
+.department-content, .department-info {
+    padding: 60px 20px;
+    background-color: var(--secondary-color);
+    margin-bottom: 50px;
+}
+
+.department-content h2, .department-info h2 {
+    font-size: 32px;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 5px;
+}
+
+.department-content ul, .department-info ul {
+    padding-left: 20px;
+    margin-bottom: 30px;
+}
+
+.department-content ul li, .department-info ul li {
+    font-size: 16px;
+    color: var(--text-color);
+    margin-bottom: 10px;
+    list-style: disc;
+    padding-left: 10px;
+}
+
+/* Services Section */
+.department-services {
+    padding: 60px 20px;
+    background-color: var(--secondary-color);
+    border-top: 3px solid var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
+    margin-bottom: 50px;
+}
+
+.department-services h2 {
+    font-size: 32px;
+    color: var(--primary-color);
+    margin-bottom: 40px;
+    text-align: center;
+    border-bottom: 3px solid var(--accent-color);
+}

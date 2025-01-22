@@ -1,0 +1,78 @@
+:root {
+    --primary-color: #002855; /* Dark Navy Blue */
+    --secondary-color: #f8f8f8; /* Light Gray */
+    --accent-color: #0073ff; /* City Accent Blue */
+    --text-color: #333; /* Dark Gray for Text */
+    --background-color: #ffffff; /* White Background */
+    --border-color: #d1d1d1; /* Border color for sections */
+    --red-accent: #d9534f; /* Subtle Red Accent */
+    --purple-accent: #6f42c1; /* Subtle Purple Accent */
+}
+
+/* Procurement Header Section */
+.procurement-header {
+    background: var(--primary-color);
+    color: var(--background-color);
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.procurement-header-content h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    color: var(--purple-accent); /* Using purple for heading */
+}
+
+.procurement-header-content p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Procurement Content Section */
+.procurement-container {
+    padding: 60px 20px;
+    background-color: var(--secondary-color);
+    text-align: center;
+    border-top: 3px solid var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
+    margin-bottom: 50px;
+}
+
+#procurement-title {
+    font-size: 32px;
+    color: var(--primary-color); /* Navy blue for title */
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 2px solid var(--purple-accent); /* Subtle purple underline */
+    padding-bottom: 10px;
+}
+
+.download-section {
+    margin-top: 20px;
+}
+
+/* Button Styling */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: var(--accent-color); /* City Accent Blue */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--primary-color); /* Dark Navy on hover */
+}
+
+/* Remove Hover Effects on this Page */
+.btn:hover {
+    background-color: var(--primary-color); /* Just color change */
+}

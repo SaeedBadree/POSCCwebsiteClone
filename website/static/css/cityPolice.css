@@ -1,0 +1,186 @@
+:root {
+    --primary-color: #001f3f; /* Navy Blue */
+    --secondary-color: #f8f8f8; /* Light Gray */
+    --accent-color: #0073ff; /* City Accent Blue */
+    --text-color: #333; /* Dark Gray for Text */
+    --background-color: #ffffff; /* White Background */
+    --border-color: #d1d1d1; /* Border color for sections */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    line-height: 1.6;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* City Police Header Section */
+.cityPolice-header {
+    background: var(--primary-color);
+    color: var(--background-color);
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.cityPolice-header h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.cityPolice-header p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Content Sections (General Styling) */
+.cityPolice-content,
+.cityPolice-info,
+.cityPolice-divisions,
+.cityPolice-court-process,
+.cityPolice-recommendations {
+    padding: 60px 20px;
+    background-color: var(--secondary-color);
+    text-align: left;
+    border-top: 3px solid var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
+    margin-bottom: 50px;
+    transition: all 0.3s ease-in-out;
+}
+
+.cityPolice-content h2,
+.cityPolice-info h2,
+.cityPolice-divisions h2,
+.cityPolice-court-process h2,
+.cityPolice-recommendations h2 {
+    font-size: 32px;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.cityPolice-content p,
+.cityPolice-info p,
+.cityPolice-divisions p,
+.cityPolice-court-process p,
+.cityPolice-recommendations p {
+    font-size: 16px;
+    color: var(--text-color);
+    margin-bottom: 25px;
+}
+
+/* Lists */
+.cityPolice-content ul,
+.cityPolice-info ul,
+.cityPolice-divisions ul,
+.cityPolice-court-process ul {
+    padding-left: 20px;
+    margin-bottom: 30px;
+}
+
+.cityPolice-content ul li,
+.cityPolice-info ul li,
+.cityPolice-divisions ul li,
+.cityPolice-court-process ul li {
+    font-size: 16px;
+    color: var(--text-color);
+    margin-bottom: 10px;
+    list-style: disc;
+    padding-left: 10px;
+}
+
+/* Recommendations Table */
+.operations-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+.operations-table th, 
+.operations-table td {
+    border: 1px solid var(--border-color);
+    padding: 15px;
+    text-align: left;
+}
+
+.operations-table th {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+}
+
+.operations-table td {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+/* Hover Effects */
+.cityPolice-content:hover,
+.cityPolice-info:hover,
+.cityPolice-divisions:hover,
+.cityPolice-court-process:hover,
+.cityPolice-recommendations:hover {
+    background-color: var(--accent-color);
+    color: var(--background-color);
+}
+
+.cityPolice-content:hover h2,
+.cityPolice-info:hover h2,
+.cityPolice-divisions:hover h2,
+.cityPolice-court-process:hover h2,
+.cityPolice-recommendations:hover h2 {
+    color: var(--background-color);
+}
+
+.cityPolice-content ul li:hover,
+.cityPolice-info ul li:hover,
+.cityPolice-divisions ul li:hover,
+.cityPolice-court-process ul li:hover {
+    color: var(--background-color);
+}
+
+.operations-table tr:hover {
+    background-color: var(--accent-color);
+    color: var(--background-color);
+}
+
+/* Mobile Responsive Styling */
+@media (max-width: 768px) {
+    .cityPolice-header h1 {
+        font-size: 36px;
+    }
+
+    .cityPolice-header p {
+        font-size: 16px;
+    }
+
+    .cityPolice-content h2,
+    .cityPolice-info h2,
+    .cityPolice-divisions h2,
+    .cityPolice-court-process h2,
+    .cityPolice-recommendations h2 {
+        font-size: 28px;
+    }
+
+    .cityPolice-content p,
+    .cityPolice-info p,
+    .cityPolice-divisions p,
+    .cityPolice-court-process p,
+    .cityPolice-recommendations p {
+        font-size: 14px;
+    }
+
+    .operations-table th,
+    .operations-table td {
+        padding: 10px;
+    }
+}
+

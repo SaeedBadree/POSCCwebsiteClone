@@ -1,0 +1,171 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f3f4f6;
+    color: #333; /* Dark text color for readability */
+}
+
+.projects-section {
+    padding: 50px 20px;
+}
+
+.projects-section h1 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #0073ff;
+    text-align: center;
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px; /* Reduced margin to make it smaller */
+}
+
+.tablink {
+    background-color: #0073ff;
+    color: #fff; /* Ensure text is white on blue background */
+    padding: 10px 15px; /* Reduced padding to make it smaller */
+    border: none;
+    cursor: pointer;
+    width: 150px; /* Set a specific width to make the tabs smaller */
+    font-size: 1em; /* Reduced font size */
+    text-align: center;
+    border-radius: 5px; /* Added border-radius to round the edges */
+    margin: 0 5px; /* Added margin between the tabs */
+}
+
+.tablink.active {
+    background-color: #005bb5; /* Darker blue for active state */
+}
+
+.tablink:hover {
+    background-color: #005bb5; /* Darker blue on hover */
+}
+
+.tabcontent {
+    display: none;
+}
+
+.projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.project-card {
+    background-color: #fff;
+    color: #333; /* Ensure dark text on white background */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-card h3 {
+    font-size: 1.5em;
+    margin: 15px 0;
+    color: #333; /* Dark text to stand out on white background */
+}
+
+.project-card .view-details {
+    background-color: #0073ff;
+    color: #fff; /* White text on blue background */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    transition: background-color 0.3s;
+}
+
+.project-card .view-details:hover {
+    background-color: #005bb5;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.project-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    background-color: #fff;
+    color: #333; /* Ensure dark text on white background */
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+    text-align: left;
+}
+
+.modal-content h2 {
+    margin-top: 0;
+    color: #0073ff; /* Blue heading */
+}
+
+.modal-content p {
+    line-height: 1.6;
+    color: #333; /* Dark text for readability */
+}
+
+.close-button {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .projects-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card {
+        width: 80%;
+    }
+
+    .modal-content {
+        width: 90%;
+    }
+
+    .tablink {
+        width: 100px; /* Make the tab smaller on mobile */
+        padding: 8px 10px; /* Adjust padding for mobile */
+        font-size: 0.9em; /* Adjust font size for mobile */
+    }
+}

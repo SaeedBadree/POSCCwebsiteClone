@@ -1,0 +1,327 @@
+:root {
+    --primary-color: #002855; /* Darker Navy Blue */
+    --secondary-color: #f8f8f8; /* Light Gray */
+    --accent-color: #072cff; /* Soft Yellow */
+    --text-color: #333; /* Dark Gray for Text */
+    --background-color: #ffffff; /* White Background */
+    --border-color: #d1d1d1; /* Border color for sections */
+    --red-accent: #d9534f; /* Subtle Red Accent */
+    --purple-accent: #6f42c1; /* Subtle Purple Accent */
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Public Health Header Section */
+.publicHealth-header {
+    background: var(--primary-color);
+    color: var(--background-color);
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.publicHealth-header-content h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    color: var(--purple-accent); /* Use purple accent for heading */
+}
+
+.publicHealth-header-content p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Content Sections */
+.publicHealth-content,
+.publicHealth-info {
+    padding: 60px 20px;
+    background-color: var(--secondary-color);
+    text-align: left;
+    border-top: 3px solid var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
+    margin-bottom: 50px;
+}
+
+.publicHealth-content h2,
+.publicHealth-info h2 {
+    font-size: 32px;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--purple-accent); /* Subtle purple underline */
+    padding-bottom: 5px;
+}
+
+.publicHealth-content p,
+.publicHealth-info p {
+    font-size: 16px;
+    color: var(--text-color);
+    margin-bottom: 25px;
+}
+
+.publicHealth-content ul,
+.publicHealth-info ul {
+    padding-left: 20px;
+    margin-bottom: 30px;
+}
+
+.publicHealth-content ul li,
+.publicHealth-info ul li {
+    font-size: 16px;
+    color: var(--text-color);
+    margin-bottom: 10px;
+    list-style: disc;
+    padding-left: 10px;
+}
+
+/* Public Health Services Section */
+.publicHealth-services {
+    padding: 60px 20px;
+    background-color: var(--secondary-color);
+    border-top: 3px solid var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
+    margin-bottom: 50px;
+    transition: all 0.3s ease-in-out;
+}
+
+.publicHealth-services h2 {
+    font-size: 32px;
+    color: var(--primary-color);
+    margin-bottom: 40px;
+    text-align: center;
+    border-bottom: 3px solid var(--red-accent); /* Subtle red accent under section header */
+}
+
+/* Collapsible Button */
+.collapsible {
+    background-color: var(--accent-color); /* Soft yellow */
+    color: var(--primary-color); /* Dark navy text */
+    cursor: pointer;
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    text-align: left;
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.collapsible:hover {
+    background-color: var(--primary-color); /* Dark navy on hover */
+    color: var(--background-color); /* White text on hover */
+}
+
+/* Collapsible Content */
+.content {
+    padding: 0 15px;
+    display: none;
+    overflow: hidden;
+    background-color: var(--background-color);
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.content h4 {
+    font-size: 20px;
+    color: var(--primary-color); /* Darker navy blue for titles */
+    margin-bottom: 15px;
+}
+
+.content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.content ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+.content ul li a {
+    color: var(--primary-color); /* Darker navy for links */
+    text-decoration: underline;
+}
+
+.content ul li a:hover {
+    color: var(--red-accent); /* Subtle red for link hover */
+}
+
+.content p {
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+/* Modal Button Styling */
+.open-modal {
+    display: inline-block;
+    background-color: var(--accent-color); /* Soft yellow for button */
+    color: var(--primary-color); /* Navy blue text */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.open-modal:hover {
+    background-color: var(--primary-color); /* Navy blue on hover */
+    color: var(--background-color); /* White text on hover */
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.4); /* Black background with opacity */
+}
+
+/* Modal content */
+.modal-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 900px;
+    border-radius: 8px;
+}
+
+/* Close button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .publicHealth-services h2 {
+        font-size: 28px;
+    }
+
+    .collapsible {
+        font-size: 16px;
+    }
+
+    .content h4 {
+        font-size: 18px;
+    }
+
+    .content ul li {
+        font-size: 14px;
+    }
+
+    .content p {
+        font-size: 14px;
+    }
+
+    .modal-content {
+        width: 95%;
+    }
+}
+
+
+.form-section {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.digital-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-control {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.submit-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.public-complaint-form {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.public-complaint-form h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #343a40;
+}
+
+.public-complaint-form .form-group {
+    margin-bottom: 15px;
+}
+
+.public-complaint-form label {
+    font-weight: bold;
+    color: #495057;
+}
+
+.public-complaint-form .form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+}
+
+.public-complaint-form .submit-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.public-complaint-form .submit-btn:hover {
+    background-color: #0056b3;
+}

@@ -1,0 +1,484 @@
+:root {
+    --primary-color: #001f3f; /* Navy Blue */
+    --secondary-color: #f8f8f8; /* Light Gray */
+    --accent-color: #0073ff; /* City Accent Blue */
+    --highlight-purple: #800080; /* Purple for subtle highlights */
+    --highlight-red: #d9534f; /* Red for minimal accents */
+    --highlight-green: #28a745; /* Green for minimal accents */
+    --highlight-yellow: #ffc107; /* Yellow for minimal accents */
+    --text-color: #333; /* Dark Gray for Text */
+    --text-color-dark: #000; /* Darker text for emphasis */
+    --background-color: #ffffff; /* White Background */
+    --border-color: #d1d1d1; /* Border color for sections */
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* City Admin Header Section */
+.cityAdmin-header {
+    background: var(--primary-color);
+    color: var(--background-color);
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.cityAdmin-header-content h1 {
+    font-size: 48px;
+    font-weight: bold;
+    color: var(--background-color);
+}
+
+.cityAdmin-header-content p {
+    font-size: 18px;
+    line-height: 1.5;
+    max-width: 800px;
+    margin: 20px auto;
+    color: var(--background-color);
+}
+
+/* City Admin Content Section */
+.cityAdmin-content, .cityAdmin-info {
+    padding: 50px 20px;
+    background-color: var(--secondary-color);
+    color: var(--text-color-dark);
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.cityAdmin-content h2, .cityAdmin-info h2 {
+    font-size: 32px;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--primary-color);
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.cityAdmin-content p, .cityAdmin-info p, .cityAdmin-rates p {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.cityAdmin-content ul, .cityAdmin-info ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.cityAdmin-content ul li, .cityAdmin-info ul li {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: var(--text-color-dark);
+}
+
+/* City Admin Rates Section */
+.cityAdmin-rates {
+    padding: 50px 20px;
+    background-color: var(--background-color);
+    color: var(--text-color-dark);
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cityAdmin-rates h2, .cityAdmin-rates h3 {
+    font-size: 32px;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.cityAdmin-rates table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.cityAdmin-rates table th, .cityAdmin-rates table td {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+    color: var(--text-color-dark);
+}
+
+.cityAdmin-rates table th {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    font-weight: bold;
+}
+
+.cityAdmin-rates table td {
+    background-color: var(--secondary-color);
+}
+
+/* Fix for hidden text */
+.cityAdmin-rates table td strong {
+    color: var(--text-color-dark); /* Ensure dark color for strong text */
+    font-weight: bold;
+    opacity: 1; /* Remove any opacity */
+}
+
+.cityAdmin-rates ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+.cityAdmin-rates ul li {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: var(--text-color-dark);
+}
+
+/* Subtle Accents with Red, Yellow, Green, and Purple */
+.cityAdmin-content h2, .cityAdmin-info h2, .cityAdmin-rates h2 {
+    border-bottom: 3px solid var(--highlight-purple); /* Purple accent */
+}
+
+.cityAdmin-content ul li, .cityAdmin-info ul li {
+    color: var(--highlight-green); /* Green bullet points */
+}
+
+.cityAdmin-header-content h1 {
+    border-bottom: 3px solid var(--highlight-red); /* Red underline for headers */
+}
+
+.cityAdmin-rates h3 {
+    font-size: 28px;
+    color: var(--highlight-purple);
+    margin-top: 40px;
+}
+
+/* Styling for important notices or emphasis */
+.cityAdmin-rates p.notice {
+    background-color: var(--highlight-yellow);
+    color: var(--text-color-dark);
+    border: 1px solid var(--highlight-red);
+    padding: 10px;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cityAdmin-header-content h1 {
+        font-size: 36px;
+    }
+
+    .cityAdmin-header-content p {
+        font-size: 16px;
+    }
+
+    .cityAdmin-content, .cityAdmin-info, .cityAdmin-rates {
+        padding: 30px 15px;
+    }
+
+    .cityAdmin-content h2, .cityAdmin-info h2, .cityAdmin-rates h2 {
+        font-size: 28px;
+    }
+
+    .cityAdmin-rates table th, .cityAdmin-rates table td {
+        font-size: 14px;
+    }
+
+    .cityAdmin-rates h3 {
+        font-size: 24px;
+    }
+
+    .cityAdmin-rates p.notice {
+        font-size: 14px;
+    }
+}
+
+
+.collapsible {
+    background-color: #0073ff;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.collapsible:hover {
+    background-color: #005bb5;
+}
+
+.content {
+    display: none;
+    padding: 0 18px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 800px;
+    border-radius: 10px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* General Styling */
+.cityAdmin-cemeteries {
+    margin: 40px 0;
+    font-family: Arial, sans-serif;
+}
+
+.cityAdmin-cemeteries h2 {
+    text-align: center;
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Main Dropdown Styling */
+.service .collapsible {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.service .collapsible:hover {
+    background-color: #45a049;
+}
+
+.service .content {
+    padding: 0 15px;
+    display: none;
+    overflow: hidden;
+    background-color: #f9f9f9;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Sub-dropdown Styling */
+.sub-service .sub-collapsible {
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 1em;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.sub-service .sub-collapsible:hover {
+    background-color: #0056b3;
+}
+
+.sub-service .content {
+    padding: 10px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* PDF Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius: 10px;
+}
+
+.modal .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.modal .close:hover,
+.modal .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Digital Form Styling */
+.digital-form {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #fff;
+    border: 2px solid #4CAF50;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.digital-form .form-group {
+    margin-bottom: 15px;
+}
+
+.digital-form .form-control {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.digital-form .submit-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.digital-form .submit-btn:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+/* Link Styling */
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button.open-modal {
+    background-color: #FFC107;
+    color: black;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.open-modal:hover {
+    background-color: #FF9800;
+}
+
+/* Styling for "Option" Lists */
+ul {
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+    font-size: 1em;
+}
+
+ul li strong {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .digital-form .form-control {
+        font-size: 0.9em;
+    }
+
+    .digital-form .submit-btn {
+        font-size: 0.9em;
+        padding: 8px 15px;
+    }
+
+    .service .collapsible, .sub-service .sub-collapsible {
+        font-size: 1em;
+        padding: 12px;
+    }
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .digital-form {
+        gap: 10px; /* Adjust spacing for smaller screens */
+    }
+
+    .submit-btn {
+        width: 100%; /* Full-width button for mobile */
+    }
+}
+

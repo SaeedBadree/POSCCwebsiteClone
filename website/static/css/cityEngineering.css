@@ -1,0 +1,205 @@
+:root {
+    --primary-color: #003366; /* Royal Blue */
+    --accent-color-yellow: #193efa; /* Yellow from logo */
+    --accent-color-red: #ff0000; /* Red from logo */
+    --accent-color-green: #4caf50; /* Green from logo */
+    --accent-color-purple: #6a1b9a; /* Purple from logo */
+    --secondary-color: #f0f0f0; /* Light Gray */
+    --text-color: #333333; /* Dark Gray for Text */
+    --background-color: #ffffff; /* White Background */
+    --heading-text-color: #ffffff; /* Heading text color for dark backgrounds */
+}
+
+/* Reset and Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    line-height: 1.6;
+}
+
+body {
+    background-color: var(--background-color);
+    color:black; /* Set global text color to dark gray */
+}
+
+/* City Engineers Header Section */
+.cityEngineers-header {
+    color: var(--heading-text-color); /* Ensure white text for headings in dark backgrounds */
+    text-align: center;
+    padding: 100px 20px;
+    background-color: var(--primary-color); /* Royal blue background */
+}
+
+.cityEngineers-header h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cityEngineers-header p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* City Engineers Content Section */
+.cityEngineers-content {
+    padding: 60px 20px;
+    background-color: var(--secondary-color); /* Light gray background */
+    text-align: left;
+    border-top: 4px solid var(--primary-color);
+    border-bottom: 4px solid var(--primary-color);
+    margin-bottom: 50px;
+}
+
+.cityEngineers-content h2 {
+    font-size: 32px;
+    color: var(--primary-color); /* Royal Blue */
+    margin-bottom: 20px;
+    border-bottom: 3px solid var(--accent-color-yellow); /* Subtle yellow border for visual enhancement */
+}
+
+/* Make all non-heading text explicitly dark */
+.cityEngineers-content p,
+.cityEngineers-content ul li,
+.cityEngineers-content ol li {
+    font-size: 16px;
+    color: black; /* Explicitly set dark gray text */
+    margin-bottom: 25px;
+}
+
+/* City Engineers Info Section */
+.cityEngineers-info {
+    padding: 60px 20px;
+    background-color: var(--background-color); /* White background for clarity */
+    text-align: left;
+    border-top: 2px solid var(--accent-color-green); /* Subtle green accent border */
+    border-bottom: 2px solid var(--accent-color-purple); /* Subtle purple accent border */
+}
+
+.cityEngineers-info h2 {
+    font-size: 32px;
+    color: var(--primary-color); /* Royal Blue */
+    margin-bottom: 20px;
+    border-bottom: 3px solid var(--accent-color-red); /* Subtle red border for visual enhancement */
+}
+
+.cityEngineers-info p,
+.cityEngineers-info ul li {
+    font-size: 16px;
+    color: black; /* Ensure dark gray text for readability */
+    margin-bottom: 25px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cityEngineers-header h1 {
+        font-size: 36px;
+    }
+
+    .cityEngineers-header p {
+        font-size: 16px;
+    }
+
+    .cityEngineers-content h2, .cityEngineers-info h2 {
+        font-size: 24px;
+    }
+
+    .cityEngineers-content p, .cityEngineers-info p {
+        font-size: 14px;
+    }
+}
+
+/* Forms Section */
+.cityEngineers-forms h2 {
+    font-size: 32px;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Collapsible Button */
+.collapsible {
+    background-color: var(--accent-color);
+    color: var(--background-color);
+    cursor: pointer;
+    padding: 15px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    font-size: 18px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.collapsible:hover {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+}
+
+.content {
+    display: none;
+    padding: 15px;
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: var(--background-color);
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 800px;
+    border-radius: 10px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: var(--primary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cityEngineers-header-content h1 {
+        font-size: 36px;
+    }
+
+    .cityEngineers-header-content p {
+        font-size: 16px;
+    }
+
+    .collapsible {
+        font-size: 16px;
+    }
+
+    .modal-content {
+        width: 90%;
+    }
+}

@@ -1,0 +1,158 @@
+:root {
+    --primary-color: #002855; /* Dark Navy */
+    --secondary-color: #f8f8f8; /* Light Gray */
+    --accent-color: #00509E; /* Deep Blue Accent */
+    --text-color: #333; /* Dark Gray */
+    --background-color: #ffffff; /* White Background */
+    --border-color: #d1d1d1; /* Border Color */
+    --link-color: #d9534f; /* Red Accent for Links */
+    --hover-color: #c9302c; /* Darker Red for Hover */
+    --minimal-yellow: #ffd700; /* Minimal Yellow Accent */
+    --minimal-purple: #6a0dad; /* Minimal Purple Accent */
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Maintenance Header Section */
+.maintenance-header {
+    background: var(--primary-color);
+    color: var(--background-color);
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.maintenance-header h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    color: var(--accent-color); /* Deep blue for header */
+}
+
+.maintenance-header p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Maintenance Content Section */
+.maintenance-content {
+    padding: 60px 20px;
+    background-color: var(--secondary-color);
+    text-align: left;
+    border-top: 3px solid var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
+    margin-bottom: 50px;
+}
+
+.maintenance-content h2 {
+    font-size: 32px;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 3px solid var(--minimal-yellow); /* Yellow underline for subtle emphasis */
+}
+
+.maintenance-content ul {
+    padding-left: 20px;
+    margin-bottom: 30px;
+}
+
+.maintenance-content ul li {
+    font-size: 16px;
+    margin-bottom: 10px;
+    list-style: disc;
+    color: var(--text-color);
+}
+
+/* Collapsible Button */
+.collapsible {
+    background-color: var(--accent-color); /* Deep blue */
+    color: var(--background-color); /* White text */
+    cursor: pointer;
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    text-align: left;
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease, border-left 0.3s ease;
+    border-left: 5px solid var(--minimal-purple); /* Subtle purple left border */
+}
+
+.collapsible:hover {
+    background-color: var(--primary-color); /* Dark blue on hover */
+    border-left: 5px solid var(--minimal-yellow); /* Subtle yellow on hover */
+}
+
+/* Collapsible Content */
+.content {
+    padding: 0 15px;
+    display: none;
+    overflow: hidden;
+    background-color: var(--background-color);
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.content ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+.content p {
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+/* Links and Forms */
+.content ul li a,
+.content p a {
+    color: var(--link-color);
+    text-decoration: underline;
+}
+
+.content ul li a:hover,
+.content p a:hover {
+    color: var(--hover-color); /* Dark red on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .maintenance-header h1 {
+        font-size: 36px;
+    }
+
+    .maintenance-header p {
+        font-size: 16px;
+    }
+
+    .maintenance-content h2 {
+        font-size: 28px;
+    }
+
+    .collapsible {
+        font-size: 16px;
+    }
+
+    .content ul li {
+        font-size: 14px;
+    }
+
+    .content p {
+        font-size: 14px;
+    }
+}

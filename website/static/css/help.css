@@ -1,0 +1,129 @@
+/* Help Section Styles */
+.help-section {
+    padding: 50px 20px;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f3f4f6; /* Consistent background color */
+    color: #333; /* Consistent dark text */
+}
+
+/* FAQ Section */
+.faq-section {
+    margin-bottom: 50px;
+}
+
+.faq-section h1 {
+    font-size: 2.5em;
+    color: #003366; /* Deep blue for headings */
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.faq .question {
+    background-color: #f9f9f9; /* Lighter background for the questions */
+    color: #333; /* Ensure dark text on light background */
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for elevation */
+}
+
+.faq .question h3 {
+    margin: 0;
+    font-size: 1.2em;
+    color: #333; /* Dark text for readability */
+}
+
+.faq .answer {
+    display: none;
+    padding: 15px;
+    margin-top: 10px;
+    background-color: #003366; /* Deep blue background for answers */
+    color: #ffffff; /* White text for readability */
+    border-left: 4px solid #0073ff; /* Accent color */
+    border-radius: 0 8px 8px 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Chatbot Section */
+.chatbot-section {
+    background-color: #ffffff; /* White background for consistency */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+}
+
+.chatbot-section h2 {
+    font-size: 2em;
+    color: #003366; /* Consistent deep blue for headings */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.chatbox {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #f9f9f9; /* Lighter background for the chatbox */
+    color: #333; /* Dark text */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+
+#chat-content {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 15px;
+    font-size: 0.9em;
+    color: #333; /* Ensure dark text for chat content */
+}
+
+.chat-message {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+.chat-message.bot {
+    background-color: #003366; /* Deep blue for bot messages */
+    color: #ffffff; /* White text for contrast */
+    text-align: left;
+}
+
+.chat-message.user {
+    background-color: #f0f0f0;
+    color: #333; /* Ensure dark text for user messages */
+    text-align: right;
+}
+
+#user-input {
+    width: calc(100% - 50px);
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+    color: #333; /* Dark text in input */
+    background-color: #ffffff; /* White background to match the rest */
+}
+
+.chatbox button {
+    background-color: #0073ff;
+    color: #ffffff; /* Ensure white text on button */
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.chatbox button:hover {
+    background-color: #005bb5; /* Darker blue on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .faq .question h3 {
+        font-size: 1em;
+    }
+}

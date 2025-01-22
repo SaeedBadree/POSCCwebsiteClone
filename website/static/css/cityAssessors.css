@@ -1,0 +1,124 @@
+/* City Assessor Header Section */
+.cityAssessor-header {
+    background-color: #003A70; /* Darker blue for contrast */
+    color: var(--color-white); /* Ensure header text remains white */
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.cityAssessor-header .cityAssessor-header-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Text shadow for readability */
+}
+
+.cityAssessor-header .cityAssessor-header-content p {
+    font-size: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    color: var(--color-white); /* Ensure paragraph text is white */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* City Assessor Content Section */
+.cityAssessor-content {
+    background-color: var(--color-background); /* Light background from base */
+    color: var(--color-dark-gray); /* Explicit dark gray text for readability */
+    padding: 60px 20px;
+}
+
+.cityAssessor-content h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: var(--color-primary); /* Primary blue for headings */
+    font-weight: bold;
+}
+
+.cityAssessor-content h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: var(--color-primary); /* Use primary color for subheadings */
+}
+
+.cityAssessor-content p, .cityAssessor-content ul {
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--color-dark-gray); /* Ensure all text is dark */
+}
+
+.cityAssessor-content ul {
+    padding-left: 20px;
+    list-style-type: disc;
+    color: var(--color-dark-gray); /* Explicitly set dark gray for lists */
+}
+
+.cityAssessor-content ul li {
+    margin-bottom: 10px;
+    color: var(--color-dark-gray); /* Ensure list items are dark gray */
+}
+
+.cityAssessor-content blockquote {
+    background-color: #e6f0ff; /* Light blue background */
+    border-left: 5px solid var(--color-primary); /* Use primary color */
+    padding: 15px;
+    font-style: italic;
+    margin: 20px 0;
+    color: var(--color-dark-gray); /* Ensure blockquote text is dark gray */
+}
+
+/* Table Styles */
+.cityAssessor-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.cityAssessor-content table th,
+.cityAssessor-content table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+    color: var(--color-dark-gray); /* Ensure table text is dark */
+}
+
+.cityAssessor-content table th {
+    background-color: var(--color-primary); /* Primary color header */
+    color: var(--color-white); /* Ensure white text for table headers */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
+
+.cityAssessor-content table td {
+    color: var(--color-dark-gray); /* Dark text in table body */
+}
+
+/* Cost emphasis */
+.cityAssessor-content .cost {
+    font-weight: bold;
+    font-size: 20px;
+    color: var(--color-dark-gray); /* Ensure cost text is visible */
+}
+
+/* Exhumations Section */
+.cityAssessor-content .cityAssessor-content h3 {
+    font-size: 24px;
+    color: var(--color-primary); /* Consistent with headings */
+    margin-bottom: 15px;
+}
+
+.cityAssessor-content ul li {
+    margin-bottom: 10px;
+    color: var(--color-dark-gray); /* Ensure list items in this section are dark gray */
+}
+
+/* Responsiveness for City Assessor Section */
+@media (max-width: 768px) {
+    .cityAssessor-header .cityAssessor-header-content h1 {
+        font-size: 36px;
+    }
+
+    .cityAssessor-content h2, .cityAssessor-content h3 {
+        font-size: 28px;
+    }
+}

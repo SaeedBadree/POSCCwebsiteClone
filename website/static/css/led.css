@@ -1,0 +1,123 @@
+:root {
+    --primary-color: #001f3f; /* Navy Blue */
+    --accent-color-yellow: #1027f1; /* Yellow from logo */
+    --accent-color-purple: #6a1b9a; /* Purple from logo */
+    --accent-color-green: #4caf50; /* Green from logo */
+    --secondary-color: #f8f8f8; /* Light Gray */
+    --text-color: #333; /* Dark Gray for Text */
+    --background-color: #ffffff; /* White Background */
+    --border-color: #d1d1d1; /* Border color for sections */
+    --highlight-color: #0073ff; /* Blue highlight for headings */
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color); /* Default dark gray for all text */
+}
+
+/* LED Header Section */
+.led-header {
+    background: var(--primary-color);
+    color: var(--background-color);
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.led-header h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    color: var(--accent-color-yellow); /* Subtle yellow accent */
+}
+
+.led-header p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--background-color); /* White text on dark background */
+}
+
+/* Content Sections: Overview, Initiatives, Resources, Future Goals */
+.led-overview, 
+.led-initiatives, 
+.led-resources, 
+.led-future-goals {
+    padding: 60px 20px;
+    background-color: var(--secondary-color); /* Light Gray background */
+    text-align: left;
+    border-top: 4px solid var(--primary-color); /* Navy Blue Borders */
+    border-bottom: 4px solid var(--primary-color);
+    margin-bottom: 50px;
+}
+
+.led-overview h2, 
+.led-initiatives h2, 
+.led-resources h2, 
+.led-future-goals h2 {
+    font-size: 32px;
+    color: var(--primary-color); /* Navy blue for section titles */
+    margin-bottom: 20px;
+    border-bottom: 3px solid var(--accent-color-purple); /* Subtle purple accent */
+}
+
+.led-overview p, 
+.led-initiatives p, 
+.led-resources p, 
+.led-future-goals p {
+    font-size: 16px;
+    color: var(--text-color); /* Ensuring text is visible */
+    margin-bottom: 25px;
+}
+
+/* Lists */
+.led-initiatives ul, 
+.led-resources ul, 
+.led-future-goals ul {
+    padding-left: 20px;
+    margin-bottom: 30px;
+}
+
+.led-initiatives ul li, 
+.led-resources ul li, 
+.led-future-goals ul li {
+    font-size: 16px;
+    color: var(--text-color); /* Ensure text color is applied */
+    margin-bottom: 10px;
+    list-style: disc;
+    padding-left: 10px;
+}
+
+/* Accent Borders for Lists */
+.led-initiatives ul li, 
+.led-resources ul li, 
+.led-future-goals ul li {
+    border-left: 4px solid var(--accent-color-green); /* Subtle green accent for list items */
+    padding-left: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .led-header h1 {
+        font-size: 36px;
+    }
+
+    .led-header p {
+        font-size: 16px;
+    }
+
+    .led-overview h2, 
+    .led-initiatives h2, 
+    .led-resources h2, 
+    .led-future-goals h2 {
+        font-size: 28px;
+    }
+
+    .led-overview p, 
+    .led-initiatives p, 
+    .led-resources p, 
+    .led-future-goals p {
+        font-size: 14px;
+    }
+}

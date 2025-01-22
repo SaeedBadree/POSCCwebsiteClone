@@ -1,0 +1,57 @@
+/* Property Management Styles */
+.property-management-header {
+    background-color: #0073ff; /* Navy blue background */
+    padding: 100px 20px;
+    text-align: center;
+    color: #fff; /* White text */
+}
+
+.property-management-header-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.property-management-header-content p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.property-management-content {
+    background-color: #f0f4f8; /* Light gray background */
+    padding: 60px 20px;
+    color: #333; /* Dark text for contrast */
+    text-align: left;
+}
+
+.property-management-content h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #044372; /* Navy blue for section titles */
+}
+
+.property-management-content ul {
+    list-style: disc;
+    padding-left: 40px;
+    margin-bottom: 30px;
+}
+
+.property-management-content ul li {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .property-management-header-content h1 {
+        font-size: 32px;
+    }
+
+    .property-management-content h2 {
+        font-size: 28px;
+    }
+
+    .property-management-content ul li {
+        font-size: 14px;
+    }
+}
