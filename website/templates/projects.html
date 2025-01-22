@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block title %}Projects - POSCC{% endblock %}
+
+{% block content %}
+
+<div class="projects-section">
+    <h1>Our Projects</h1>
+
+    <!-- Tab Navigation -->
+    <div class="tabs">
+        <button class="tablink active" onclick="openTab(event, 'current')">Current Projects</button>
+        <button class="tablink" onclick="openTab(event, 'completed')">Completed Projects</button>
+    </div>
+
+    <!-- Current Projects Tab -->
+    <div id="current" class="tabcontent" style="display: block;">
+        <div class="projects-grid">
+            {% for project in current_projects %}
+            <div class="project-card">
+                <img src="{{ url_for('static', filename=project.image) }}" alt="{{ project.title }}">
+                <h3>{{ project.title }}</h3>
+                <button class="view-details" onclick="openModal('{{ project.id }}')">View Details</button>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- Completed Projects Tab -->
+    <div id="completed" class="tabcontent">
+        <div class="projects-grid">
+            {% for project in completed_projects %}
+            <div class="project-card">
+                <img src="{{ url_for('static', filename=project.image) }}" alt="{{ project.title }}">
+                <h3>{{ project.title }}</h3>
+                <button class="view-details" onclick="openModal('{{ project.id }}')">View Details</button>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<!-- Modals for Project Details -->
+{% for project in current_projects + completed_projects %}
+<div id="modal-{{ project.id }}" class="project-modal">
+    <div class="modal-content">
+        <span class="close-button" onclick="closeModal('{{ project.id }}')">&times;</span>
+        <h2>{{ project.title }}</h2>
+        <img src="{{ url_for('static', filename=project.image) }}" alt="{{ project.title }}" style="width: 100%; margin-bottom: 15px;">
+        <p>{{ project.description }}</p>
+    </div>
+</div>
+{% endfor %}
+
+{% endblock %}

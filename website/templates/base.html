@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}POSCC Website{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/sign_up.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/services.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/council.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/projects.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/contact.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/help.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/cityAdmin.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/cityEngineering.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/cityPolice.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/publicHealth.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/led.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/disasterManagement.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/cityAssessors.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/market.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/maintenance.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/procurement.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/news.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/treasurers.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/propertyManagement.css') }}">
+
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/geospatial.css') }}">   -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    
+    <style>
+        #map {
+            height: 600px;
+            width: 100%;
+            margin: 50px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <!-- Logo Link -->
+        <a href="{{ url_for('views.home') }}">
+            <img src="{{ url_for('static', filename='images/posccLogo.png') }}" id="poscclogo" alt="POSCC Logo">
+        </a>
+        
+        <!-- Navigation Links -->
+        <div class="nav-links" id="navLinks">
+            <ul>
+                <!-- Home Link -->
+                <li><a href="{{ url_for('views.home') }}">Home</a></li>
+                
+                <!-- About Us Dropdown -->
+                <li>
+                    <a href="{{ url_for('views.about') }}">About Us <i class="fas fa-caret-down"></i></a>
+                    <!-- Larger container for the dropdown -->
+                    <div class="dropdown-container">
+                        <div class="dropdown-menu">
+                            <ul>
+                                <li><a href="{{ url_for('views.about') }}#about-establishment">Our History</a></li>
+                                <li><a href="{{ url_for('views.about') }}#vision">Vision and Mission</a></li>
+                                <li><a href="{{ url_for('views.about') }}#boundaries">Boundaries/Spatial Content</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+    
+                <!-- Our Services Dropdown -->
+                <li>
+                    <a href="{{ url_for('views.services') }}">Our Services <i class="fas fa-caret-down"></i></a>
+                    <!-- Larger container for the dropdown and sub-dropdown -->
+                    <div class="dropdown-container">
+                        <div class="dropdown-menu">
+                            <ul>
+                                <li>
+                                    <a href="{{ url_for('views.maintenance') }}">Maintenance <i class="fas fa-caret-right"></i></a>
+                                    <!-- Sub-dropdown menu -->
+                                    <div class="dropdown-menu-1">
+                                        <ul>
+                                            <li><a href="{{ url_for('views.maintenance') }}#road-repair">Road Repair Services</a></li>
+                                            <li><a href="{{ url_for('views.maintenance') }}#sanitation">Sanitation Services</a></li>
+                                            <li><a href="{{ url_for('views.maintenance') }}#tree-cutting">Tree Cutting</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#">Public Health <i class="fas fa-caret-right"></i></a>
+                                    <!-- Sub-dropdown menu -->
+                                    <div class="dropdown-menu-1">
+                                        <ul>
+                                            <li><a href="{{ url_for('views.publicHealth') }}#ph-services">Public Complaints</a></li>
+                                            <li><a href="{{ url_for('views.publicHealth') }}#ph-services">Food Badge Application</a></li>
+                                            <li><a href="{{ url_for('views.publicHealth') }}#ph-services">Water Truck Services</a></li>
+                                            <li><a href="{{ url_for('views.publicHealth') }}#ph-services">Cesspool Cleaning</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li><a href="{{ url_for('views.news') }}">News/Announcements</a></li>
+                                <li><a href="{{ url_for('views.market') }}">Market</a></li>
+                                <li><a href="{{ url_for('views.geospatial') }}">Geospatial Mapping Service</a></li>
+                                <li><a href="{{ url_for('views.help') }}#faq-section">Events</a></li>
+                                <li><a href="{{ url_for('views.help') }}#faq-section">FAQs</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+    
+                <!-- Departments Dropdown -->
+                <li>
+                    <a href="{{ url_for('views.departments') }}">Departments <i class="fas fa-caret-down"></i></a>
+                    <!-- Larger container for the dropdown and sub-dropdown -->
+                    <div class="dropdown-container">
+                        <div class="dropdown-menu">
+                            <ul>
+                                <li>
+                                    <a href="{{ url_for('views.cityAdmin') }}">City Administration <i class="fas fa-caret-right"></i></a>
+                                    <!-- Sub-dropdown menu -->
+                                    <div class="dropdown-menu-1">
+                                        <ul>
+                                            <li><a href="{{ url_for('views.cityAdmin') }}">Office of the C.E.O</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="{{ url_for('views.propertyManagement') }}">Property Management <i class="fas fa-caret-right"></i></a>
+                                    <!-- Sub-dropdown menu -->
+                                    <div class="dropdown-menu-1">
+                                        <ul>
+                                            <li><a href="{{ url_for('views.propertyManagement') }}">Administrative Department</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="{{ url_for('views.city_engineers') }}">City Engineering <i class="fas fa-caret-right"></i></a>
+                                    <!-- Sub-dropdown menu -->
+                                    <div class="dropdown-menu-1">
+                                        <ul>
+                                            <li><a href="{{ url_for('views.city_engineers') }}">Administrative Department</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="{{ url_for('views.cityPolice') }}">City Police <i class="fas fa-caret-right"></i></a>
+                                    <!-- Sub-dropdown menu -->
+                                    <div class="dropdown-menu-1">
+                                        <ul>
+                                            <li><a href="{{ url_for('views.cityPolice') }}">Administrative Department</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="{{ url_for('views.disasterManagement') }}">Disaster Management <i class="fas fa-caret-right"></i></a>
+                                    <!-- Sub-dropdown menu -->
+                                    <div class="dropdown-menu-1">
+                                        <ul>
+                                            <li><a href="{{ url_for('views.disasterManagement') }}">Internal and External Administration</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="{{ url_for('views.procurement') }}">Procurement <i class="fas fa-caret-right"></i></a>
+                                    <!-- Sub-dropdown menu -->
+                                    <div class="dropdown-menu-1">
+                                        <ul>
+                                            <li><a href="{{ url_for('views.procurement') }}">Annual Procurement Plan</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="{{ url_for('views.publicHealth') }}">Public Health <i class="fas fa-caret-right"></i></a>
+                                    <!-- Sub-dropdown menu -->
+                                    <div class="dropdown-menu-1">
+                                        <ul>
+                                            <li><a href="{{ url_for('views.publicHealth') }}">Public Health Services</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="{{ url_for('views.led') }}">Local Economic Development <i class="fas fa-caret-right"></i></a>
+                                    <!-- Sub-dropdown menu -->
+                                    <div class="dropdown-menu-1">
+                                        <ul>
+                                            <li><a href="{{ url_for('views.led') }}">Economic Development Initiatives</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="{{ url_for('views.cityAssessors') }}">City Assessors <i class="fas fa-caret-right"></i></a>
+                                    <!-- Sub-dropdown menu -->
+                                    <div class="dropdown-menu-1">
+                                        <ul>
+                                            <li><a href="{{ url_for('views.cityAssessors') }}">City Assessors</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="{{ url_for('views.treasurers') }}">Treasurer's Department <i class="fas fa-caret-right"></i></a>
+                                    <!-- Sub-dropdown menu -->
+                                    <div class="dropdown-menu-1">
+                                        <ul>
+                                            <li><a href="{{ url_for('views.treasurers') }}">Treasurer's Department</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                
+                <!-- Additional links -->
+                <li><a href="{{ url_for('views.meet_the_council') }}">Meet The Council</a></li>
+                <li><a href="{{ url_for('views.projects') }}">Projects</a></li>
+                <li><a href="{{ url_for('views.contact') }}">Contact Us</a></li>
+                <li><a href="{{ url_for('views.help') }}">Help</a></li>
+    
+                <!-- Authentication Links -->
+                {% if current_user.is_authenticated %}
+                <li><a href="/logout">Logout</a></li>
+                {% else %}
+                <li><a href="/login">Login</a></li>
+                <li><a href="/sign-up">Signup</a></li>
+                {% endif %}
+            </ul>
+        </div>
+    
+        <!-- Mobile Menu Icons -->
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+        <i class="fa fa-times" onclick="hideMenu()" style="display: none;"></i> <!-- Close menu icon -->
+    </nav>
+    
+    
+
+    <div class="container">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        {% for category, message in messages %}
+        {% if category == 'error' %}
+        <div class="alert alert-danger alert-dismissable fade show" role="alert">
+            {{ message }}
+            <button type="button" class="close" data-dismiss="alert">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        {% else %}
+        <div class="alert alert-success alert-dismissable fade show" role="alert">
+            {{ message }}
+            <button type="button" class="close" data-dismiss="alert">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        {% endif %}
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+    </div>
+
+    </section>
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+
+
+<!-- Footer Section -->
+<section class="footer">
+    <div class="footer-content">
+        <!-- About Us Column -->
+        <div class="footer-column">
+            <h4>About Us</h4>
+            <ul>
+                <li><a href="{{ url_for('views.about') }}">Port of Spain At A Glance</a></li>
+                <li><a href="{{ url_for('views.about') }}">History</a></li>
+                <li><a href="{{ url_for('views.about') }}">Governance</a></li>
+            </ul>
+        </div>
+        <!-- Our Services Column -->
+        <div class="footer-column">
+            <h4>Our Services</h4>
+            <ul>
+                <li><a href="{{ url_for('views.maintenance') }}">Maintenance</a></li>
+                <li><a href="{{ url_for('views.publicHealth') }}">Public Health</a></li>
+                <li><a href="{{ url_for('views.services') }}">Sanitation</a></li>
+                <li><a href="{{ url_for('views.services') }}">Cesspool Cleaning</a></li>
+            </ul>
+        </div>
+        <!-- Departments Column -->
+        <div class="footer-column">
+            <h4>Departments</h4>
+            <ul>
+                <li><a href="{{ url_for('views.city_engineers') }}">City Engineering</a></li>
+                <li><a href="{{ url_for('views.procurement') }}">Procurement</a></li>
+                <li><a href="{{ url_for('views.cityPolice') }}">Municipal Police</a></li>
+            </ul>
+        </div>
+        <!-- Contact Us Column -->
+        <div class="footer-column">
+            <h4>Contact Us</h4>
+            <ul>
+                <li><a href="{{ url_for('views.contact') }}">Contact Information</a></li>
+                <li><a href="{{ url_for('views.help') }}">FAQs</a></li>
+                <li><a href="{{ url_for('views.chatbot') }}">Chat Bot</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+        <!-- Logo Section -->
+        <div class="footer-logo">
+            <img src="{{ url_for('static', filename='images/POSCC_Logo.jpg') }}" alt="POSCC Logo">
+        </div>
+        <!-- Social Media Icons -->
+        <div class="footer-social">
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <!-- Legal Section -->
+        <div class="footer-legal">
+            <p><a href="#">Terms of Use</a> | <a href="#">Privacy Policy</a> | © 2024 POSCC. All Rights Reserved.</p>
+        </div>
+    </div>
+</section>
+
+
+   
+
+   <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.js'></script>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        // Initialize the map and set its view to the given location and zoom level
+        var map = L.map('map').setView([10.6918, -61.2225], 13);
+
+        // Set up the OpenStreetMap tiles
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '© OpenStreetMap'
+        }).addTo(map);
+
+        // Add a marker at the given location
+        var marker = L.marker([10.6918, -61.2225]).addTo(map)
+            .bindPopup("<b>Hello world!</b><br />This is Port of Spain.")
+            .openPopup();
+    </script>
+
+    <script src="{{ url_for('static', filename='js/projects.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/chatbot.js') }}"></script>
+    
+    <script src="{{ url_for('static', filename='js/publicHealth.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/about.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+   
+
+</body>
+
+</html>

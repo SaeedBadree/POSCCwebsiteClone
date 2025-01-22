@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+
+{% block title %}Departments - POSCC{% endblock %}
+
+{% block content %}
+<!-- Departments Section-->
+<section class="departments-section">
+  <div class="container">
+    <h1>Explore Our Departments</h1>
+    <div class="departments-row">
+      <!-- Communication Department -->
+      <div class="department-card">
+        <a href="{{ url_for('views.departments') }}" class="icon-link">
+          <i class="fas fa-bullhorn department-icon"></i> <!-- Communication Icon -->
+        </a>
+        <div class="department-content">
+          <h2>Communication</h2>
+          <p>The Communications Department is a strategic hub dedicated to enhancing internal and external communication efforts...</p>
+          <a href="{{ url_for('views.departments') }}" class="learn-more">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Procurement Department -->
+      <div class="department-card">
+        <a href="{{ url_for('views.procurement') }}" class="icon-link">
+          <i class="fas fa-shopping-cart department-icon"></i> <!-- Procurement Icon -->
+        </a>
+        <div class="department-content">
+          <h2>Procurement</h2>
+          <p>The Procurement Department plays an integral part of the corporation and is crucial in the purchasing process...</p>
+          <a href="{{ url_for('views.procurement') }}" class="learn-more">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Public Health Department -->
+      <div class="department-card">
+        <a href="{{ url_for('views.publicHealth') }}" class="icon-link">
+          <i class="fas fa-medkit department-icon"></i> <!-- Public Health Icon -->
+        </a>
+        <div class="department-content">
+          <h2>Public Health</h2>
+          <p>The Public Health Department is led by the Principal Medical and Health Officer (PMHO) and focuses on public health initiatives...</p>
+          <a href="{{ url_for('views.publicHealth') }}" class="learn-more">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Local Economic Development Department -->
+      <div class="department-card">
+        <a href="{{ url_for('views.led') }}" class="icon-link">
+          <i class="fas fa-chart-line department-icon"></i> <!-- Local Economic Development Icon -->
+        </a>
+        <div class="department-content">
+          <h2>Local Economic Development</h2>
+          <p>The LED Department works towards the economic development of the region, helping to achieve sustainable growth...</p>
+          <a href="{{ url_for('views.led') }}" class="learn-more">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Building Inspectorate -->
+      <div class="department-card">
+        <a href="{{ url_for('views.cityAssessors') }}" class="icon-link">
+          <i class="fas fa-building department-icon"></i> <!-- Building Inspectorate Icon -->
+        </a>
+        <div class="department-content">
+          <h2>Building Inspectorate</h2>
+          <p>The Building Inspectorate unit is responsible for development planning and control within the region...</p>
+          <a href="{{ url_for('views.cityAssessors') }}" class="learn-more">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Technical/Transport Department -->
+      <div class="department-card">
+        <a href="{{ url_for('views.departments') }}" class="icon-link">
+          <i class="fas fa-tools department-icon"></i> <!-- Technical/Transport Icon -->
+        </a>
+        <div class="department-content">
+          <h2>Technical/Transport</h2>
+          <p>The Technical/Transport Department is a crucial component within the organization, managing and maintaining transport infrastructure...</p>
+          <a href="{{ url_for('views.departments') }}" class="learn-more">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Disaster Management Department -->
+      <div class="department-card">
+        <a href="{{ url_for('views.disasterManagement') }}" class="icon-link">
+          <i class="fas fa-exclamation-triangle department-icon"></i> <!-- Disaster Management Icon -->
+        </a>
+        <div class="department-content">
+          <h2>Disaster Management</h2>
+          <p>The Disaster Management Unit is responsible for implementing strategies to mitigate, prepare for, respond to, and recover from disasters...</p>
+          <a href="{{ url_for('views.disasterManagement') }}" class="learn-more">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Municipal Police Department -->
+      <div class="department-card">
+        <a href="{{ url_for('views.cityPolice') }}" class="icon-link">
+          <i class="fas fa-balance-scale department-icon"></i> <!-- Municipal Police Icon -->
+        </a>
+        <div class="department-content">
+          <h2>Municipal Police</h2>
+          <p>The Municipal Police Department is responsible for maintaining public safety and enforcing laws within the specific municipality...</p>
+          <a href="{{ url_for('views.cityPolice') }}" class="learn-more">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

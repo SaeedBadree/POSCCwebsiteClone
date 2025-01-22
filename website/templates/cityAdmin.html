@@ -1,0 +1,377 @@
+{% extends "base.html" %}
+
+{% block title %}City Administration Department{% endblock %}
+
+{% block content %}
+<!-- City Admin Header Section -->
+<section class="cityAdmin-header">
+    <div class="cityAdmin-header-content">
+        <h1>City Administration Department</h1>
+        <p>The City Administration Department is the administrative hub of the Port of Spain Corporation.
+            It is the interface between the Council and Departments within the organization, as well as with external
+            organizations.</p>
+    </div>
+</section>
+
+<!-- City Admin Content Section -->
+<section class="cityAdmin-content">
+    <h2>Role and Functions</h2>
+    <p>The functions of the Department are as follows:</p>
+    <ul>
+        <li>Corporate Services</li>
+        <li>Tourism Support</li>
+        <li>Advertising Control</li>
+        <li>Coordinating, Monitoring and Managing Relationships</li>
+        <li>Records Management</li>
+        <li>Legal Services</li>
+        <li>Licensing</li>
+        <li>Rental of Corporate Properties</li>
+        <li>Printing Services</li>
+        <li>Public Relations</li>
+        <li>Estate Management</li>
+        <li>Promotion of Civic Pride and Citizen Participation in Local Governance</li>
+    </ul>
+</section>
+
+<!-- Departmental Information Section -->
+<section class="cityAdmin-info">
+    <h2>Departmental Information</h2>
+    <p>The department has forty (40) members of staff comprising twenty-seven (27) monthly paid officers and thirteen
+        (13) daily paid workers.</p>
+    <p>There are six (6) Supervisory positions as follows:</p>
+    <ul>
+        <li>The Chief Executive Officer</li>
+        <li>The Deputy Chief Executive Officer</li>
+        <li>The Administrative Officer II</li>
+        <li>The Administrative Assistant</li>
+        <li>The Printing Supervisor</li>
+        <li>The Record Keeper</li>
+    </ul>
+</section>
+
+<!-- Hall Rental Rates Section -->
+<section class="cityAdmin-rates">
+    <h2>Charges for Rental of Assembly Hall</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Weekdays (Mon-Fri)</th>
+                <th>Weekends (Sat-Sun) & Public Holidays</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Rental of Hall</td>
+                <td>$1,500.00</td>
+                <td>$2,000.00</td>
+            </tr>
+            <tr>
+                <td>Hall/P.A. Attendant</td>
+                <td>$300.00</td>
+                <td>$300.00</td>
+            </tr>
+            <tr>
+                <td>Cleaning Charges</td>
+                <td>$400.00</td>
+                <td>$800.00</td>
+            </tr>
+            <tr>
+                <td>VAT (12.5%)</td>
+                <td>$275.00</td>
+                <td>$387.50</td>
+            </tr>
+            <tr>
+                <td>Refundable Deposit</td>
+                <td>$400.00</td>
+                <td>$400.00</td>
+            </tr>
+            <tr>
+                <td><strong>Total</strong></td>
+                <td><strong>$2,875.00</strong></td>
+                <td><strong>$3,887.50</strong></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Additional Charges</h3>
+    <p>An overtime charge of $590.00 applies for the first 8 hours. The next 8 hours or part thereof will incur an
+        additional charge of $885.00.</p>
+
+    <h3>Wedding Receptions</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Rate</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Rental of Hall</td>
+                <td>$2,500.00</td>
+            </tr>
+            <tr>
+                <td>Hall/P.A. Attendant</td>
+                <td>$300.00</td>
+            </tr>
+            <tr>
+                <td>Cleaning Charges</td>
+                <td>$800.00</td>
+            </tr>
+            <tr>
+                <td>VAT (12.5%)</td>
+                <td>$450.00</td>
+            </tr>
+            <tr>
+                <td>Refundable Deposit</td>
+                <td>$400.00</td>
+            </tr>
+            <tr>
+                <td><strong>Total</strong></td>
+                <td><strong>$4,450.00</strong></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Rental of Tables</h3>
+    <ul>
+        <li>Rectangle Tables (8' x 30"): $12.00 each (seats 10 persons)</li>
+        <li>Circle Tables (5' diameter): $15.00 each (seats 10 persons)</li>
+    </ul>
+
+    <p>A non-refundable booking deposit of $500.00 must be paid on submission of the application form. All charges must
+        be paid in advance of the use of the auditorium. These charges include the use of the Public Address System and
+        Chairs.</p>
+
+    <h3>Additional Services</h3>
+    <p>Requests for additional parking and security (City Police) must be made in advance and in writing. The Hall seats
+        approximately 300 persons in the main hall and 100 persons in the balcony.</p>
+</section>
+
+<!-- Cemeteries Section -->
+<section class="cityAdmin-cemeteries">
+    <h2>Cemeteries Forms</h2>
+
+    <!-- Main Dropdown -->
+    <div class="service">
+        <button class="collapsible">Cemeteries Forms</button>
+        <div class="content">
+
+            <!-- Application to Remove Ownership -->
+            <div class="sub-service">
+                <button class="collapsible sub-collapsible">Application to Remove Ownership</button>
+                <div class="content">
+                    <ul>
+                        <li>
+                            <strong>Option 1:</strong> Download and fill out the Application to Remove Ownership form: 
+                            (<a href="{{ url_for('static', filename='files/cemeteries_remove_owner.pdf') }}" download>Download PDF</a>)
+                        </li>
+                        <li>
+                            <strong>Option 2:</strong> Preview the form before downloading:
+                            <button class="open-modal" data-modal="pdfModalRemoveOwnership">Preview PDF</button>
+                        </li>
+                        <li>
+                            <strong>Option 3:</strong> Complete the form online below.
+                        </li>
+                    </ul>
+
+                    <!-- PDF Modal -->
+                    <div id="pdfModalRemoveOwnership" class="modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <embed src="{{ url_for('static', filename='files/cemeteries_remove_owner.pdf') }}" type="application/pdf" width="100%" height="600px" />
+                        </div>
+                    </div>
+
+                    <!-- Remove Ownership Form -->
+                    <form action="{{ url_for('views.submit_remove_ownership') }}" method="POST" class="digital-form">
+                        {{ remove_ownership_form.hidden_tag() }}
+                        <div class="form-group">
+                            {{ remove_ownership_form.date.label }} {{ remove_ownership_form.date(class="form-control") }}
+                        </div>
+                        <div class="form-group">
+                            {{ remove_ownership_form.cemetery.label }} {{ remove_ownership_form.cemetery(class="form-control") }}
+                        </div>
+                        <div class="form-group">
+                            {{ remove_ownership_form.block_number.label }} {{ remove_ownership_form.block_number(class="form-control") }}
+                        </div>
+                        <div class="form-group">
+                            {{ remove_ownership_form.grave_space.label }} {{ remove_ownership_form.grave_space(class="form-control") }}
+                        </div>
+                        <div class="form-group">
+                            {{ remove_ownership_form.owner_details.label }} {{ remove_ownership_form.owner_details(class="form-control") }}
+                        </div>
+                        <div class="form-group">
+                            {{ remove_ownership_form.contact_number.label }} {{ remove_ownership_form.contact_number(class="form-control") }}
+                        </div>
+                        <button type="submit" class="submit-btn">Submit</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Application to Include Ownership -->
+            <div class="sub-service">
+                <button class="collapsible sub-collapsible">Application to Include Ownership</button>
+                <div class="content">
+                    <ul>
+                        <li>
+                            <strong>Option 1:</strong> Download and fill out the Application to Include Ownership form: 
+                            (<a href="{{ url_for('static', filename='files/cemeteries_include_owner.pdf') }}" download>Download PDF</a>)
+                        </li>
+                        <li>
+                            <strong>Option 2:</strong> Preview the form before downloading:
+                            <button class="open-modal" data-modal="pdfModalIncludeOwnership">Preview PDF</button>
+                        </li>
+                        <li>
+                            <strong>Option 3:</strong> Complete the form online below.
+                        </li>
+                    </ul>
+
+                    <!-- PDF Modal -->
+                    <div id="pdfModalIncludeOwnership" class="modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <embed src="{{ url_for('static', filename='files/cemeteries_include_owner.pdf') }}" type="application/pdf" width="100%" height="600px" />
+                        </div>
+                    </div>
+
+                    <!-- Include Ownership Form -->
+                    <form action="{{ url_for('views.submit_include_ownership') }}" method="POST" class="digital-form">
+                        {{ include_ownership_form.hidden_tag() }}
+                        <div class="form-group">
+                            {{ include_ownership_form.date.label }} {{ include_ownership_form.date(class="form-control") }}
+                        </div>
+                        <div class="form-group">
+                            {{ include_ownership_form.cemetery.label }} {{ include_ownership_form.cemetery(class="form-control") }}
+                        </div>
+                        <div class="form-group">
+                            {{ include_ownership_form.block_number.label }} {{ include_ownership_form.block_number(class="form-control") }}
+                        </div>
+                        <div class="form-group">
+                            {{ include_ownership_form.grave_space.label }} {{ include_ownership_form.grave_space(class="form-control") }}
+                        </div>
+                        <div class="form-group">
+                            {{ include_ownership_form.additional_owner_details.label }} {{ include_ownership_form.additional_owner_details(class="form-control") }}
+                        </div>
+                        <div class="form-group">
+                            {{ include_ownership_form.contact_number.label }} {{ include_ownership_form.contact_number(class="form-control") }}
+                        </div>
+                        <button type="submit" class="submit-btn">Submit</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Application to Change Ownership -->
+            <div class="sub-service">
+                <button class="collapsible sub-collapsible">Application to Change Ownership</button>
+                <div class="content">
+                    <ul>
+                        <li>
+                            <strong>Option 1:</strong> Download and fill out the Application to Change Ownership form: 
+                            (<a href="{{ url_for('static', filename='files/cemeteries_change_owner.pdf') }}" download>Download PDF</a>)
+                        </li>
+                        <li>
+                            <strong>Option 2:</strong> Preview the form before downloading:
+                            <button class="open-modal" data-modal="pdfModalChangeOwner">Preview PDF</button>
+                        </li>
+                        <li>
+                            <strong>Option 3:</strong> Complete the form online below.
+                        </li>
+                    </ul>
+
+                    <!-- PDF Modal -->
+                    <div id="pdfModalChangeOwner" class="modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <embed src="{{ url_for('static', filename='files/cemeteries_change_owner.pdf') }}" type="application/pdf" width="100%" height="600px" />
+                        </div>
+                    </div>
+
+                    <!-- Change Ownership Form -->
+                    <form action="{{ url_for('views.submit_change_ownership') }}" method="POST" class="digital-form">
+                        {{ change_ownership_form.hidden_tag() }}
+                        <div class="form-group">
+                            {{ change_ownership_form.date.label }} {{ change_ownership_form.date(class="form-control") }}
+                        </div>
+                        <div class="form-group">
+                            {{ change_ownership_form.cemetery.label }} {{ change_ownership_form.cemetery(class="form-control") }}
+                        </div>
+                        <div class="form-group">
+                            {{ change_ownership_form.block_number.label }} {{ change_ownership_form.block_number(class="form-control") }}
+                        </div>
+                        <div class="form-group">
+                            {{ change_ownership_form.grave_space.label }} {{ change_ownership_form.grave_space(class="form-control") }}
+                        </div>
+                        <div class="form-group">
+                            {{ change_ownership_form.owner_details.label }} {{ change_ownership_form.owner_details(class="form-control") }}
+                        </div>
+                        <div class="form-group">
+                            {{ change_ownership_form.contact_number.label }} {{ change_ownership_form.contact_number(class="form-control") }}
+                        </div>
+                        <button type="submit" class="submit-btn">Submit</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Application to Transfer Allotment -->
+            <div class="sub-service">
+                <button class="collapsible sub-collapsible">Application to Transfer Allotment</button>
+                <div class="content">
+                    <ul>
+                        <li>
+                            <strong>Option 1:</strong> Download and fill out the Application to Transfer Allotment form: 
+                            (<a href="{{ url_for('static', filename='files/cemeteries_transfer_allotment.pdf') }}" download>Download PDF</a>)
+                        </li>
+                        <li>
+                            <strong>Option 2:</strong> Preview the form before downloading:
+                            <button class="open-modal" data-modal="pdfModalTransferAllotment">Preview PDF</button>
+                        </li>
+                        <li>
+                            <strong>Option 3:</strong> Complete the form online below.
+                        </li>
+                    </ul>
+
+                    <!-- PDF Modal -->
+                    <div id="pdfModalTransferAllotment" class="modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <embed src="{{ url_for('static', filename='files/cemeteries_transfer_allotment.pdf') }}" type="application/pdf" width="100%" height="600px" />
+                        </div>
+                    </div>
+
+                    <!-- Transfer Allotment Form -->
+                    <form action="{{ url_for('views.submit_transfer_allotment') }}" method="POST" class="digital-form">
+                        {{ transfer_allotment_form.hidden_tag() }}
+                        <div class="form-group">
+                            {{ transfer_allotment_form.date.label }} {{ transfer_allotment_form.date(class="form-control") }}
+                        </div>
+                        <div class="form-group">
+                            {{ transfer_allotment_form.cemetery.label }} {{ transfer_allotment_form.cemetery(class="form-control") }}
+                        </div>
+                        <div class="form-group">
+                            {{ transfer_allotment_form.block_number.label }} {{ transfer_allotment_form.block_number(class="form-control") }}
+                        </div>
+                        <div class="form-group">
+                            {{ transfer_allotment_form.grave_space.label }} {{ transfer_allotment_form.grave_space(class="form-control") }}
+                        </div>
+                        <div class="form-group">
+                            {{ transfer_allotment_form.transfer_to.label }} {{ transfer_allotment_form.transfer_to(class="form-control") }}
+                        </div>
+                        <div class="form-group">
+                            {{ transfer_allotment_form.transfer_reason.label }} {{ transfer_allotment_form.transfer_reason(class="form-control") }}
+                        </div>
+                        <div class="form-group">
+                            {{ transfer_allotment_form.contact_number.label }} {{ transfer_allotment_form.contact_number(class="form-control") }}
+                        </div>
+                        <button type="submit" class="submit-btn">Submit</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+{% endblock %}

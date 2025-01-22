@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+
+{% block title %}Contact Us - Port of Spain City Corporation{% endblock %}
+
+{% block content %}
+
+<div class="contact-section">
+    <div class="contact-header">
+        <img src="{{ url_for('static', filename='images/red_house.png') }}" alt="Contact Us Header">
+        <div class="contact-title-overlay">
+            <h1>CONTACT US</h1>
+        </div>
+    </div>
+
+    <div class="map-and-info">
+        <div class="hours">
+            <h2>Hours of Operation</h2>
+            <ul>
+                <li>Monday: 8am - 4pm</li>
+                <li>Tuesday: 8am - 4pm</li>
+                <li>Wednesday: 8am - 4pm</li>
+                <li>Thursday: 8am - 4pm</li>
+                <li>Friday: 8am - 4pm</li>
+            </ul>
+        </div>
+
+        <div class="map-container">
+            <div id="map"></div>
+        </div>
+
+        <div class="contact-info">
+            <h2>Information</h2>
+            <p><strong>Phone:</strong> +1 868-123-4567</p>
+            <p><strong>Email:</strong> contact@poscc.gov.tt</p>
+            <p><strong>Address:</strong> 2-4 Knox St, Port of Spain, Trinidad & Tobago</p>
+            <div class="social-icons">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="directory-section">
+        <h2>Directory</h2>
+        <div class="directory-grid">
+            <div class="directory-item">
+                <h3>Councillors</h3>
+                <ul>
+                    <li>John Doe - Mayor</li>
+                    <li>Jane Doe - Deputy Mayor</li>
+                </ul>
+            </div>
+            <div class="directory-item">
+                <h3>Administrative</h3>
+                <ul>
+                    <li>Administration Department: +1 868-123-4567</li>
+                    <li>Finance Department: +1 868-123-4568</li>
+                </ul>
+            </div>
+            <div class="directory-item">
+                <h3>Public Health/Building Inspectorate</h3>
+                <ul>
+                    <li>Public Health: +1 868-123-4569</li>
+                    <li>Building Inspectorate: +1 868-123-4570</li>
+                </ul>
+            </div>
+            <div class="directory-item">
+                <h3>Other</h3>
+                <ul>
+                    <li>Other Department: +1 868-123-4571</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block title %}Meet the Council - POSCC{% endblock %}
+
+{% block content %}
+    
+    <!-- Mayor Section -->
+    <section class="leader-section mayor">
+        <div class="leader-content">
+            <img src="{{ url_for('static', filename='images/mayor.jpeg') }}" alt="Mayor">
+            <div class="leader-info">
+                <h1>Mayor of Port of Spain</h1>
+                <h2>John Doe</h2>
+                <p>John Doe has been serving as the Mayor of Port of Spain since 2019, with a focus on urban development and community engagement...</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Deputy Mayor Section -->
+    <section class="leader-section deputy-mayor">
+        <div class="leader-content">
+            <img src="{{ url_for('static', filename='images/deputy-mayor.jpeg') }}" alt="Deputy Mayor">
+            <div class="leader-info">
+                <h1>Deputy Mayor</h1>
+                <h2>Jane Doe</h2>
+                <p>Jane Doe, the Deputy Mayor, works alongside the Mayor in overseeing the city's operations and strategic initiatives...</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Councillors Section -->
+    <section class="councillors-section">
+        <h1>Our Councillors</h1>
+        <div class="councillors-row">
+            {% for councillor in councillors %}
+            <div class="councillor-card">
+                <div class="councillor-image">
+                    <img src="{{ url_for('static', filename='images/' + councillor.image) }}" alt="{{ councillor.name }}" class="profile-image">
+                </div>
+                <div class="councillor-info">
+                    <h2>{{ councillor.name }}</h2>
+                    <h3>{{ councillor.ward }}</h3>
+                    <p>{{ councillor.description }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+{% endblock %}

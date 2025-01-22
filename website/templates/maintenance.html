@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block title %}Maintenance Services{% endblock %}
+
+{% block content %}
+<!-- Maintenance Services Header Section -->
+<section class="maintenance-header">
+    <div class="maintenance-header-content">
+        <h1>Maintenance Services</h1>
+        <p>The Port of Spain City Corporation provides essential maintenance services to ensure the well-being and safety of our city. Our team is dedicated to maintaining roads, sanitation, and the natural environment.</p>
+    </div>
+</section>
+
+<!-- Maintenance Services Content Section -->
+<section class="maintenance-content">
+    <h2>Maintenance Work We Provide</h2>
+    <p>Our maintenance services include:</p>
+    <ul>
+        <li>Road Repair Services</li>
+        <li>Sanitation Services</li>
+        <li>Tree Cutting Services</li>
+    </ul>
+</section>
+
+<!-- Maintenance Services Details -->
+<section class="maintenance-details">
+
+    <!-- Road Repair Services -->
+    <div class="service" id="road-repair">
+        <button class="collapsible">Road Repair Services</button>
+        <div class="content">
+            <p>We are responsible for maintaining and repairing roads across the city to ensure safe driving conditions. Our services include:</p>
+            <ul>
+                <li>Pothole patching</li>
+                <li>Asphalt resurfacing</li>
+                <li>Sidewalk repairs</li>
+            </ul>
+            <p>To report road issues, <a href="{{ url_for('static', filename='files/road_repair_form.pdf') }}" download>Download the road repair request form</a> and submit it to our office.</p>
+        </div>
+    </div>
+
+    <!-- Sanitation Services -->
+    <div class="service" id="sanitation">
+        <button class="collapsible">Sanitation Services</button>
+        <div class="content">
+            <p>Our sanitation team works daily to keep the city clean and hygienic. We provide:</p>
+            <ul>
+                <li>Street sweeping</li>
+                <li>Garbage collection and disposal</li>
+                <li>Graffiti removal</li>
+            </ul>
+            <p>For more information on waste collection schedules, please contact us at sanitation@poscity.gov.</p>
+        </div>
+    </div>
+
+    <!-- Tree Cutting Services -->
+    <div class="service" id="tree-cutting">
+        <button class="collapsible">Tree Cutting Services</button>
+        <div class="content">
+            <p>We maintain trees in public spaces, ensuring the safety of residents by trimming or removing overgrown or hazardous trees. Services include:</p>
+            <ul>
+                <li>Tree trimming and pruning</li>
+                <li>Emergency tree removal (after storms)</li>
+                <li>Maintenance of trees in parks and public areas</li>
+            </ul>
+            <p>To request tree cutting services, <a href="{{ url_for('static', filename='files/tree_cutting_request_form.pdf') }}" download>Download the tree cutting request form</a> and submit it to our office.</p>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

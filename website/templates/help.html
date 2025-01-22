@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}Help - Port of Spain City Corporation{% endblock %}
+
+{% block content %}
+<div class="help-section">
+    <!-- FAQ Section -->
+    <div class="faq-section" id="faq-section">
+        <h1>Frequently Asked Questions</h1>
+        <div class="faq">
+            <div class="question" onclick="toggleAnswer(this)">
+                <h3>What are the opening hours of the Port of Spain City Corporation?</h3>
+                <div class="answer">
+                    <p>The Port of Spain City Corporation is open from 8am to 4pm, Monday to Friday.</p>
+                </div>
+            </div>
+            <div class="question" onclick="toggleAnswer(this)">
+                <h3>How can I apply for a building permit?</h3>
+                <div class="answer">
+                    <p>You can apply for a building permit through our online portal or by visiting the Building Inspectorate office.</p>
+                </div>
+            </div>
+            <div class="question" onclick="toggleAnswer(this)">
+                <h3>Where can I pay my property taxes?</h3>
+                <div class="answer">
+                    <p>Property taxes can be paid at the Finance Department or through our online payment system.</p>
+                </div>
+            </div>
+            <!-- Add more FAQs as needed -->
+        </div>
+    </div>
+
+    <!-- Chatbot Section -->
+    <div class="chatbot-section">
+        <h2>Chat with Us</h2>
+        <div class="chatbox">
+            <div id="chat-content">
+                <div class="chat-message bot">Hello! How can I assist you today?</div>
+            </div>
+            <input type="text" id="user-input" placeholder="Type your message here..." onkeydown="if(event.key === 'Enter') sendMessage()">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+</div>
+{% endblock %}

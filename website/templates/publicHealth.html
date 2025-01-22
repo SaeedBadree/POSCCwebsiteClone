@@ -1,0 +1,322 @@
+{% extends "base.html" %}
+
+{% block title %}Public Health Department{% endblock %}
+
+{% block content %}
+<!-- Public Health Header Section -->
+<section class="publicHealth-header">
+    <div class="publicHealth-header-content">
+        <h1>Public Health Department</h1>
+        <p>The Public Health Department is responsible for ensuring the health and sanitation of the city, 
+           adhering to the Public Health Ordinance, and other relevant regulations.</p>
+    </div>
+</section>
+
+<!-- Public Health Content Section -->
+<section class="publicHealth-content">
+    <h2>Roles and Functions</h2>
+    <p>The main functions of the Public Health Department are as follows:</p>
+    <ul>
+        <li>Inspections made to food establishments and food vendors to ensure food safety.</li>
+        <li>Clinic – immunization, annual medical check-ups of employees in high-risk occupations, pre-employment screening, family planning, counseling.</li>
+        <li>Health Education – lectures to schools and food badge applicants.</li>
+        <li>Environmental Health – food and water sampling, removal of stray dogs, cleaning of cesspits, street washing, vector and rodent control, monitoring of water courses and open spaces.</li>
+        <li>School Health Screening Programme.</li>
+        <li>Investigation of health outbreaks and public health complaints.</li>
+        <li>Reporting on Building and Lease applications.</li>
+    </ul>
+</section>
+
+<!-- Departmental Information Section -->
+<section class="publicHealth-info">
+    <h2>Departmental Information</h2>
+    <p>The Public Health Department is headed by a Principal Medical and Health Officer. The department comprises 
+       two hundred and thirty-one (231) staff members, including sixty-seven (67) monthly paid officers and one hundred and sixty-three (163) daily rated employees.</p>
+    
+    <h3>Supervisory Positions</h3>
+    <p>There are seventeen (17) supervisory positions on the monthly paid establishment, and twelve (12) on the daily rated establishment.</p>
+</section>
+
+<!-- Public Health Services Section -->
+<section class="publicHealth-services" id="ph-services">
+    <h2>Services Provided by the Public Health Department</h2>
+
+    <!-- Service 1: Application for Food Badge -->
+    <div class="service" id="food-badge">
+        <button class="collapsible">Application for Food Badge</button>
+        <div class="content">
+            <div class="service-requirements">
+                <h4>Requirements</h4>
+                <ul>
+                    <li>Please read the following requirements form: (<a href="{{ url_for('static', filename='files/food_badge_requirements.pdf') }}" download>Download PDF</a>)</li>
+                    <p><button class="open-modal" data-modal="pdfModalFoodBadge">Preview PDF</button></p>
+                    
+                    <!-- Modal for PDF Preview -->
+                    <div id="pdfModalFoodBadge" class="modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <embed src="{{ url_for('static', filename='files/food_badge_requirements.pdf') }}" type="application/pdf" width="100%" height="600px" />
+                        </div>
+                    </div>
+
+                    <li>Two passport-sized photographs</li>
+                    <li>Valid identification (National ID, Passport, or Driver's License)</li>
+                    <li>Completed Food Handlers Medical Examination Form (<a href="{{ url_for('static', filename='files/food_handlers_medical_examination.pdf') }}" download>Download PDF</a>)</li>
+                    <li>If food is being brought from out of the city: Completed Out of City Form (<a href="{{ url_for('static', filename='files/food_badge_out_of_city.pdf') }}" download>Download PDF</a>)</li>
+                </ul>
+            </div>
+            <div class="service-apply">
+                <h4>How to Apply</h4>
+                <p>Visit the Public Health Department with the required documents. Submit the completed forms at the reception desk, make payment at cashier once approved, and receive your badge.</p>
+                <p>Or Complete the form online:</p>
+                <section class="form-section">
+                    <h2>Food Handlers Medical Examination Form</h2>
+                    <form action="{{ url_for('views.submit_food_handlers') }}" method="POST" class="digital-form">
+                        {{ food_handlers_form.hidden_tag() }}
+                    
+                        <!-- General Information Section -->
+                        <h3>General Information</h3>
+                        <div class="form-group">
+                            {{ food_handlers_form.date.label }} 
+                            {{ food_handlers_form.date(class="form-control") }}
+                        </div>
+                    
+                        <div class="form-group">
+                            {{ food_handlers_form.name.label }} 
+                            {{ food_handlers_form.name(class="form-control") }}
+                        </div>
+                    
+                        <div class="form-group">
+                            {{ food_handlers_form.sex.label }}
+                            <div>
+                                {{ food_handlers_form.sex(class="form-check-input") }}
+                            </div>
+                        </div>
+                    
+                        <div class="form-group">
+                            {{ food_handlers_form.home_address.label }} 
+                            {{ food_handlers_form.home_address(class="form-control") }}
+                        </div>
+                    
+                        <div class="form-group">
+                            {{ food_handlers_form.date_of_birth.label }} 
+                            {{ food_handlers_form.date_of_birth(class="form-control") }}
+                        </div>
+                    
+                        <div class="form-group">
+                            {{ food_handlers_form.identification_no.label }} 
+                            {{ food_handlers_form.identification_no(class="form-control") }}
+                        </div>
+                    
+                        <div class="form-group">
+                            {{ food_handlers_form.telephone.label }} 
+                            {{ food_handlers_form.telephone(class="form-control") }}
+                        </div>
+                    
+                        <!-- Business Information Section -->
+                        <h3>Business Information</h3>
+                        <div class="form-group">
+                            {{ food_handlers_form.business_name.label }} 
+                            {{ food_handlers_form.business_name(class="form-control") }}
+                        </div>
+                    
+                        <div class="form-group">
+                            {{ food_handlers_form.business_type.label }} 
+                            {{ food_handlers_form.business_type(class="form-control") }}
+                        </div>
+                    
+                        <div class="form-group">
+                            {{ food_handlers_form.business_address.label }} 
+                            {{ food_handlers_form.business_address(class="form-control") }}
+                        </div>
+                    
+                        <!-- Family History Section -->
+                        <h3>Family History</h3>
+                        <div class="form-group">
+                            <label>Family History (Check all that apply):</label>
+                            <div>
+                                {{ food_handlers_form.family_typhoid() }} {{ food_handlers_form.family_typhoid.label }}
+                                {{ food_handlers_form.family_tuberculosis() }} {{ food_handlers_form.family_tuberculosis.label }}
+                                {{ food_handlers_form.family_jaundice() }} {{ food_handlers_form.family_jaundice.label }}
+                                {{ food_handlers_form.family_chronic_cough() }} {{ food_handlers_form.family_chronic_cough.label }}
+                                {{ food_handlers_form.family_hospitalization() }} {{ food_handlers_form.family_hospitalization.label }}
+                            </div>
+                            <div>
+                                {{ food_handlers_form.family_other.label }} 
+                                {{ food_handlers_form.family_other(class="form-control") }}
+                            </div>
+                        </div>
+                    
+                        <!-- Personal History Section -->
+                        <h3>Personal History</h3>
+                        <div class="form-group">
+                            <label>Personal History (Check all that apply):</label>
+                            <div>
+                                {{ food_handlers_form.personal_typhoid() }} {{ food_handlers_form.personal_typhoid.label }}
+                                {{ food_handlers_form.personal_tuberculosis() }} {{ food_handlers_form.personal_tuberculosis.label }}
+                                {{ food_handlers_form.personal_jaundice() }} {{ food_handlers_form.personal_jaundice.label }}
+                                {{ food_handlers_form.personal_chronic_cough() }} {{ food_handlers_form.personal_chronic_cough.label }}
+                                {{ food_handlers_form.personal_hospitalization() }} {{ food_handlers_form.personal_hospitalization.label }}
+                                {{ food_handlers_form.personal_asthmatic_attacks() }} {{ food_handlers_form.personal_asthmatic_attacks.label }}
+                                {{ food_handlers_form.personal_allergies() }} {{ food_handlers_form.personal_allergies.label }}
+                            </div>
+                            <div>
+                                {{ food_handlers_form.personal_other.label }} 
+                                {{ food_handlers_form.personal_other(class="form-control") }}
+                            </div>
+                        </div>
+                    
+                        <!-- Declaration Section -->
+                        <h3>Declaration</h3>
+                        <div class="form-group">
+                            {{ food_handlers_form.declaration() }} {{ food_handlers_form.declaration.label }}
+                        </div>
+                    
+                        <div class="form-group">
+                            {{ food_handlers_form.applicant_signature.label }} 
+                            {{ food_handlers_form.applicant_signature(class="form-control") }}
+                        </div>
+                    
+                        <div class="form-group">
+                            {{ food_handlers_form.applicant_signature_date.label }} 
+                            {{ food_handlers_form.applicant_signature_date(class="form-control") }}
+                        </div>
+                    
+                        <!-- Submit Button -->
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                    
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- Service 2: Truck Bourne Distribution of Water -->
+    <div class="service" id="water-truck">
+        <button class="collapsible">Truck Bourne Distribution of Water</button>
+        <div class="content">
+            <div class="service-requirements">
+                <h4>Requirements</h4>
+                <ul>
+                    <li>Completed Request Form (<a href="{{ url_for('static', filename='files/water_distribution_form.pdf') }}" download>Download PDF</a>)</li>
+                    <li>Proof of residence (Utility bill or Lease)</li>
+                </ul>
+            </div>
+            <div class="service-apply">
+                <h4>How to Apply</h4>
+                <p>Please call +1 868 123-4567 to request water delivery to your residence</p>
+                <p>Submit the request form and proof of residence to the Public Health Department. After the application is processed, water distribution will be scheduled within 48 hours.</p>
+            </div>
+        </div>
+    </div>
+
+   <!-- Service 3: Public Complaints -->
+<div class="service" id="public-complaints">
+    <button class="collapsible">Public Complaints</button>
+    <div class="content">
+        <div class="service-requirements">
+            <h4>Requirements</h4>
+            <ul>
+                <li>Please read and complete the following Public Complaints form: (<a href="{{ url_for('static', filename='files/public_complaints.pdf') }}" download>Download PDF</a>)</li>
+                <p><button class="open-modal" data-modal="pdfModalPublicComplaints">Preview PDF</button></p>
+                
+                <!-- Modal for PDF Preview -->
+                <!-- Corrected modal id -->
+                <div id="pdfModalPublicComplaints" class="modal"> 
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <embed src="{{ url_for('static', filename='files/public_complaints.pdf') }}" type="application/pdf" width="100%" height="600px" />
+                    </div>
+                </div>
+            </ul>
+        </div>
+        <div class="service-apply">
+            <h4>How to Apply</h4>
+            <p>Fill out the complaint form and submit it to the Public Health Department in person</p>
+            <p>Or complete the form online:</p>
+           
+            <section class="form-section">
+                <h2>Public Complaints Form</h2>
+                <form action="{{ url_for('views.submit_public_complaint') }}" method="POST" class="digital-form">
+                    {{ public_complaint_form.hidden_tag() }}
+            
+                    <!-- Date -->
+                    <div class="form-group">
+                        {{ public_complaint_form.date.label }}
+                        {{ public_complaint_form.date(class="form-control") }}
+                    </div>
+            
+                    <!-- Premises -->
+                    <div class="form-group">
+                        {{ public_complaint_form.premises.label }}
+                        {{ public_complaint_form.premises(class="form-control") }}
+                    </div>
+            
+                    <!-- Nature of Complaint -->
+                    <div class="form-group">
+                        {{ public_complaint_form.nature_of_complaint.label }}
+                        {{ public_complaint_form.nature_of_complaint(class="form-control") }}
+                    </div>
+            
+                    <!-- Complainant Name -->
+                    <div class="form-group">
+                        {{ public_complaint_form.complainant_name.label }}
+                        {{ public_complaint_form.complainant_name(class="form-control") }}
+                    </div>
+            
+                    <!-- Contact Details -->
+                    <div class="form-group">
+                        {{ public_complaint_form.contact_details.label }}
+                        {{ public_complaint_form.contact_details(class="form-control") }}
+                    </div>
+            
+                    <!-- Action Taken -->
+                    <div class="form-group">
+                        {{ public_complaint_form.action_taken.label }}
+                        {{ public_complaint_form.action_taken(class="form-control") }}
+                    </div>
+            
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </section>
+            
+        </div>
+    </div>
+</div>
+<!-- Service 4: Cesspit Cleaning -->
+<div class="service" id="cesspit-cleaning">
+    <button class="collapsible">Cesspit Cleaning</button>
+    <div class="content">
+        <div class="service-requirements">
+            <h4>Requirements</h4>
+            <ul>
+                <li>
+                    Please read and complete the following Cesspool Cleaning form: 
+                    (<a href="{{ url_for('static', filename='files/cesspool_cleaning.pdf') }}" download>Download PDF</a>)
+                </li>
+                <li>Present form at cashier and make payment for the service.</li>
+            </ul>
+            <!-- Modal Trigger Button should not be inside a <ul><li> -->
+            <p>
+                <button class="open-modal" data-modal="pdfModalCesspoolCleaning">Preview PDF</button>
+            </p>
+
+            <!-- Modal for PDF Preview -->
+            <div id="pdfModalCesspoolCleaning" class="modal"> 
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <embed src="{{ url_for('static', filename='files/cesspool_cleaning.pdf') }}" type="application/pdf" width="100%" height="600px" />
+                </div>
+            </div>
+        </div>
+        <div class="service-apply">
+            <h4>How to Apply</h4>
+            <p>Submit the Cesspit Cleaning Request Form and proof of ownership to the Public Health Department. The cleaning will be scheduled.</p>
+        </div>
+    </div>
+</div>
+</section>
+
+{% endblock %}
+

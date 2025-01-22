@@ -1,0 +1,40 @@
+<!--{% extends "base.html" %}
+
+{% block title %}Geospatial Mapping - POSCC{% endblock %}
+
+{% block content %}
+    <h1>Geospatial Mapping Feature</h1>
+    <div id="map" style="height: 500px;"></div>
+{% endblock %}
+
+{% block scripts %}
+   
+    <script>
+        mapboxgl.accessToken = 'your_mapbox_access_token'; // Replace with your Mapbox access token
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v11',
+            center: [-61.514, 10.652], // Port of Spain coordinates
+            zoom: 13
+        });
+
+        // Example: Adding a marker
+        new mapboxgl.Marker()
+            .setLngLat([-61.514, 10.652])
+            .setPopup(new mapboxgl.Popup().setHTML("<b>Port of Spain</b><br>This is the city center."))
+            .addTo(map);
+
+        // Add more markers as needed
+        var locations = [
+            {"name": "Location 1", "lat": 10.652, "lng": -61.514},
+            {"name": "Location 2", "lat": 10.662, "lng": -61.524}
+        ];
+
+        locations.forEach(function(location) {
+            new mapboxgl.Marker()
+                .setLngLat([location.lng, location.lat])
+                .setPopup(new mapboxgl.Popup().setHTML("<b>" + location.name + "</b><br>Details here."))
+                .addTo(map);
+        });
+    </script>
+{% endblock %} -->

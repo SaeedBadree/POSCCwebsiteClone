@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block title %}News & Announcements - POSCC{% endblock %}
+
+{% block content %}
+    <!-- News & Announcements Header Section -->
+    <section class="news-header">
+        <div class="news-header-content">
+            <h1>News & Announcements</h1>
+            <p>Stay updated with the latest news, events, and important announcements from the Port of Spain City Corporation.</p>
+        </div>
+    </section>
+
+    <!-- News Articles Section -->
+    <section class="news-section">
+        <h2>Latest News</h2>
+        <div class="news-cards">
+            <!-- News Card 1 -->
+            <div class="news-card">
+                <h3>Citywide Cleanup Initiative Launched</h3>
+                <p>The Port of Spain City Corporation has launched a citywide cleanup initiative to maintain the city’s sanitation...</p>
+                <a href="news-article-1.html" class="btn btn-primary">Read More</a>
+            </div>
+            <!-- News Card 2 -->
+            <div class="news-card">
+                <h3>Public Health Department to Offer Free Clinics</h3>
+                <p>The Public Health Department has announced free health clinics in several local areas. Services will include...</p>
+                <a href="news-article-2.html" class="btn btn-primary">Read More</a>
+            </div>
+            <!-- News Card 3 -->
+            <div class="news-card">
+                <h3>Upgraded Public Facilities in Downtown Port of Spain</h3>
+                <p>The Corporation has completed the renovation of key public facilities in downtown Port of Spain...</p>
+                <a href="news-article-3.html" class="btn btn-primary">Read More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Announcements Section -->
+    <section class="announcements-section">
+        <h2>Upcoming Announcements</h2>
+        <ul class="announcements-list">
+            <li><strong>September 15, 2024:</strong> Council Meeting on Infrastructure Upgrades</li>
+            <li><strong>October 1, 2024:</strong> Public Health Awareness Workshop for Local Schools</li>
+            <li><strong>November 10, 2024:</strong> Annual City Parade - Street Closures and Traffic Notices</li>
+        </ul>
+    </section>
+
+{% endblock %}

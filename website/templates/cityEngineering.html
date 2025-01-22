@@ -1,0 +1,412 @@
+{% extends "base.html" %}
+
+{% block title %}City Engineer’s Department{% endblock %}
+
+{% block content %}
+<!-- City Engineers Header Section -->
+<section class="cityEngineers-header">
+    <div class="cityEngineers-header-content">
+        <h1>City Engineer’s Department</h1>
+        <p>The City Engineer’s Department is charged with the responsibility of developing and maintaining the physical 
+           infrastructure of the City of Port of Spain. The department is organized into various divisions and sectors to ensure 
+           efficient operation and management of the city's infrastructure.</p>
+    </div>
+</section>
+
+<!-- City Engineers Content Section -->
+<section class="cityEngineers-content">
+    <h2>Roles and Functions</h2>
+    <p>The department operates the following:</p>
+    <ul>
+        <li>Administrative Engineering Services</li>
+        <li>Divisions - Central, Eastern, St. James, and Western</li>
+        <li>Markets - Central and St. James</li>
+        <li>Cemeteries - Lapeyrouse, Western, and Woodbrook</li>
+        <li>Social Amenities - Parks and Squares</li>
+        <li>Transport and Cleansing Department</li>
+        <li>Maintenance Department</li>
+        <li>Building Section</li>
+        <li>The Development Programme</li>
+        <li>The Crematorium</li>
+        <li>Public Sector Investment Programme (PSIP)</li>
+    </ul>
+    <h3>Main Functions</h3>
+    <ol>
+        <li>Monitor and control all building developments and construction activities in the city.</li>
+        <li>Maintain the physical infrastructure of recreational facilities, plant, equipment, and vehicles belonging to the Corporation.</li>
+        <li>Manage the operations of City Institutions and Departments.</li>
+        <li>Identify individual work programmes and submit estimated costs.</li>
+        <li>Provide scavenging services.</li>
+        <li>Provide safe, adequate, and sanitary accommodation for vendors in city institutions.</li>
+        <li>Ensure hygienic and cost-effective methods for interment.</li>
+        <li>Purchase, receive, and issue stock items for the Port of Spain Corporation.</li>
+        <li>Maintain and upkeep the physical infrastructure of City Hall and all other Port of Spain Corporation institutions.</li>
+    </ol>
+</section>
+
+<!-- Departmental Information Section -->
+<section class="cityEngineers-info">
+    <h2>Departmental Information</h2>
+    <p>The Department is presently headed by an Acting City Engineer with a staff of 1,087 members. This includes 
+       93 monthly-paid officers and 994 daily-rated employees.</p>
+    <h3>Supervisory Staff</h3>
+    <ul>
+        <li>One (1) City Engineer</li>
+        <li>One (1) Assistant City Engineer</li>
+        <li>One (1) Administrative Assistant</li>
+        <li>Two (2) Works Supervisors III’s</li>
+        <li>One (1) Engineering Assistant</li>
+        <li>One (1) Works Supervisor II</li>
+        <li>Four (4) Works Supervisors I</li>
+        <li>Four (4) Assistant Works Supervisors</li>
+        <li>One (1) Building Inspector I</li>
+        <li>One (1) Building Inspector II</li>
+        <li>One (1) Storekeeper III</li>
+        <li>One (1) Storekeeper II</li>
+        <li>One (1) Crematorium Manager</li>
+        <li>One (1) Crematorium Superintendent</li>
+        <li>One (1) Superintendent, Transport and Cleansing</li>
+        <li>One (1) Transport Foreman</li>
+        <li>One (1) Garage Supervisor</li>
+        <li>One (1) Garage Foreman</li>
+        <li>One (1) Market Administrator</li>
+        <li>Two (2) Cemetery Keepers</li>
+    </ul>
+    <h3>Daily Rated Establishment</h3>
+    <ul>
+        <li>Six (6) Supervisors</li>
+        <li>Twenty-seven (27) Foremen</li>
+        <li>Thirty-four (34) Chargehands</li>
+    </ul>
+</section>
+
+
+<!-- City Engineers Forms Section -->
+<section class="cityEngineers-forms">
+    <h2>Buildings Section Engineering Forms and Applications</h2>
+
+    <!-- Application for Copy/Search Form -->
+    <div class="service">
+        <button class="collapsible">Application for Copy/Search Form</button>
+        <div class="content">
+            <ul>
+                <li>Download and fill out the Application for Copy/Search form:
+                    (<a href="{{ url_for('static', filename='files/application_for_copy_search.pdf') }}" download>Download PDF</a>)
+                </li>
+            </ul>
+            <section class="form-section">
+                <h2>Application for Copy/Search</h2>
+                <form action="{{ url_for('views.submit_copy_search') }}" method="POST" class="digital-form">
+                    {{ copy_search_form.hidden_tag() }}
+                    <div class="form-group">
+                        {{ copy_search_form.address_of_development.label }}
+                        {{ copy_search_form.address_of_development(class="form-control") }}
+                    </div>
+                    <div class="form-group">
+                        {{ copy_search_form.date_of_approval.label }}
+                        {{ copy_search_form.date_of_approval(class="form-control") }}
+                    </div>
+                    <div class="form-group">
+                        {{ copy_search_form.registration_number.label }}
+                        {{ copy_search_form.registration_number(class="form-control") }}
+                    </div>
+                    <div class="form-group">
+                        {{ copy_search_form.name_of_owner.label }}
+                        {{ copy_search_form.name_of_owner(class="form-control") }}
+                    </div>
+                    <div class="form-group">
+                        {{ copy_search_form.address_of_owner.label }}
+                        {{ copy_search_form.address_of_owner(class="form-control") }}
+                    </div>
+                    <div class="form-group">
+                        {{ copy_search_form.date.label }}
+                        {{ copy_search_form.date(class="form-control") }}
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </section>
+            
+            <button class="open-modal" data-modal="modalCopySearch">Preview Form</button>
+            <!-- Modal -->
+            <div id="modalCopySearch" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <embed src="{{ url_for('static', filename='files/application_for_copy_search.pdf') }}" type="application/pdf" width="100%" height="600px" />
+                </div>
+               
+            </div>
+        </div>
+    </div>
+
+    <!-- Blocking Footway Form -->
+    <div class="service">
+        <button class="collapsible">Blocking Footway Form</button>
+        <div class="content">
+            <ul>
+                <li>Download and fill out the Blocking Footway form:
+                    (<a href="{{ url_for('static', filename='files/blocking_footway_form.pdf') }}" download>Download PDF</a>)
+                </li>
+            </ul>
+           <!-- Blocking Footway Form -->
+           <section class="form-section">
+            <h2>Application for Permission to Block the Footway</h2>
+            <form action="{{ url_for('views.submit_blocking_footway') }}" method="POST" class="digital-form">
+                {{ blocking_footway_form.hidden_tag() }}
+        
+                <!-- Location -->
+                <div class="form-group">
+                    {{ blocking_footway_form.location.label }}
+                    {{ blocking_footway_form.location(class="form-control") }}
+                </div>
+        
+                <!-- Period -->
+                <div class="form-group">
+                    <label for="period">Period:</label>
+                    <div class="row">
+                        <div class="col">
+                            {{ blocking_footway_form.period_days.label }}
+                            {{ blocking_footway_form.period_days(class="form-control") }}
+                        </div>
+                        <div class="col">
+                            {{ blocking_footway_form.period_weeks.label }}
+                            {{ blocking_footway_form.period_weeks(class="form-control") }}
+                        </div>
+                        <div class="col">
+                            {{ blocking_footway_form.period_months.label }}
+                            {{ blocking_footway_form.period_months(class="form-control") }}
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Dates -->
+                <div class="form-group">
+                    {{ blocking_footway_form.from_date.label }}
+                    {{ blocking_footway_form.from_date(class="form-control") }}
+                </div>
+                <div class="form-group">
+                    {{ blocking_footway_form.to_date.label }}
+                    {{ blocking_footway_form.to_date(class="form-control") }}
+                </div>
+        
+                <!-- Dimensions -->
+                <div class="form-group">
+                    {{ blocking_footway_form.length_of_footway.label }}
+                    {{ blocking_footway_form.length_of_footway(class="form-control") }}
+                </div>
+                <div class="form-group">
+                    {{ blocking_footway_form.existing_width.label }}
+                    {{ blocking_footway_form.existing_width(class="form-control") }}
+                </div>
+                <div class="form-group">
+                    {{ blocking_footway_form.width_to_obstruct.label }}
+                    {{ blocking_footway_form.width_to_obstruct(class="form-control") }}
+                </div>
+        
+                <!-- Reason for Application -->
+                <div class="form-group">
+                    {{ blocking_footway_form.reason_for_application.label }}
+                    {{ blocking_footway_form.reason_for_application(class="form-control") }}
+                </div>
+        
+                <!-- Applicant Details -->
+                <div class="form-group">
+                    {{ blocking_footway_form.applicant_name.label }}
+                    {{ blocking_footway_form.applicant_name(class="form-control") }}
+                </div>
+                <div class="form-group">
+                    {{ blocking_footway_form.applicant_address.label }}
+                    {{ blocking_footway_form.applicant_address(class="form-control") }}
+                </div>
+        
+                <!-- Owner Details -->
+                <div class="form-group">
+                    {{ blocking_footway_form.owner_name.label }}
+                    {{ blocking_footway_form.owner_name(class="form-control") }}
+                </div>
+                <div class="form-group">
+                    {{ blocking_footway_form.owner_signature.label }}
+                    {{ blocking_footway_form.owner_signature(class="form-control") }}
+                </div>
+        
+                <!-- Submit Button -->
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </section>
+        
+            
+            <button class="open-modal" data-modal="modalBlockingFootway">Preview Form</button>
+            <!-- Modal -->
+            <div id="modalBlockingFootway" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <embed src="{{ url_for('static', filename='files/blocking_footway_form.pdf') }}" type="application/pdf" width="100%" height="600px" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Buildings Application Form -->
+    <div class="service">
+        <button class="collapsible">Buildings Application Form</button>
+        <div class="content">
+            <ul>
+                <li>Download and fill out the Buildings Application form:
+                    (<a href="{{ url_for('static', filename='files/buildings_application_form.pdf') }}" download>Download PDF</a>)
+                </li>
+            </ul>
+           <!-- Building Application Form -->
+    <section>
+        <h2>Building Application</h2>
+        <form action="{{ url_for('views.submit_building_application') }}" method="POST">
+            {{ building_application_form.hidden_tag() }}
+
+            <div>
+                {{ building_application_form.work_type.label }}
+                {{ building_application_form.work_type(class="form-control") }}
+            </div>
+            <div>
+                {{ building_application_form.premises_no.label }}
+                {{ building_application_form.premises_no(class="form-control") }}
+            </div>
+            <div>
+                {{ building_application_form.north_dimension.label }}
+                {{ building_application_form.north_dimension(class="form-control") }}
+            </div>
+            <div>
+                {{ building_application_form.south_dimension.label }}
+                {{ building_application_form.south_dimension(class="form-control") }}
+            </div>
+            <div>
+                {{ building_application_form.east_dimension.label }}
+                {{ building_application_form.east_dimension(class="form-control") }}
+            </div>
+            <div>
+                {{ building_application_form.west_dimension.label }}
+                {{ building_application_form.west_dimension(class="form-control") }}
+            </div>
+            <div>
+                {{ building_application_form.nature_of_building.label }}
+                {{ building_application_form.nature_of_building(class="form-control") }}
+            </div>
+            <div>
+                {{ building_application_form.building_length.label }}
+                {{ building_application_form.building_length(class="form-control") }}
+            </div>
+            <div>
+                {{ building_application_form.building_width.label }}
+                {{ building_application_form.building_width(class="form-control") }}
+            </div>
+            <div>
+                {{ building_application_form.building_height.label }}
+                {{ building_application_form.building_height(class="form-control") }}
+            </div>
+            <div>
+                {{ building_application_form.owner_name.label }}
+                {{ building_application_form.owner_name(class="form-control") }}
+            </div>
+            <div>
+                {{ building_application_form.owner_signature.label }}
+                {{ building_application_form.owner_signature(class="form-control") }}
+            </div>
+            <div>
+                {{ building_application_form.contractor_name.label }}
+                {{ building_application_form.contractor_name(class="form-control") }}
+            </div>
+            <button type="submit">Submit Building Application</button>
+        </form>
+    </section>
+
+            <button class="open-modal" data-modal="modalBuildingsApplication">Preview Form</button>
+            <!-- Modal -->
+            <div id="modalBuildingsApplication" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <embed src="{{ url_for('static', filename='files/buildings_application_form.pdf') }}" type="application/pdf" width="100%" height="600px" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cargo Container Form -->
+    <div class="service">
+        <button class="collapsible">Cargo Container Form</button>
+        <div class="content">
+            <ul>
+                <li>Download and fill out the Cargo Container form:
+                    (<a href="{{ url_for('static', filename='files/cargo_container_form.pdf') }}" download>Download PDF</a>)
+                </li>
+            </ul>
+            <button class="open-modal" data-modal="modalCargoContainer">Preview Form</button>
+            <!-- Modal -->
+            <div id="modalCargoContainer" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <embed src="{{ url_for('static', filename='files/cargo_container_form.pdf') }}" type="application/pdf" width="100%" height="600px" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Execution of Work Form -->
+    <div class="service">
+        <button class="collapsible">Execution of Work Form</button>
+        <div class="content">
+            <ul>
+                <li>Download and fill out the Execution of Work form:
+                    (<a href="{{ url_for('static', filename='files/execution_of_work_form.pdf') }}" download>Download PDF</a>)
+                </li>
+            </ul>
+            <button class="open-modal" data-modal="modalExecutionWork">Preview Form</button>
+            <!-- Modal -->
+            <div id="modalExecutionWork" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <embed src="{{ url_for('static', filename='files/execution_of_work_form.pdf') }}" type="application/pdf" width="100%" height="600px" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Removal of Premises Form -->
+    <div class="service">
+        <button class="collapsible">Removal of Premises Form</button>
+        <div class="content">
+            <ul>
+                <li>Download and fill out the Removal of Premises form:
+                    (<a href="{{ url_for('static', filename='files/removal_of_premises_form.pdf') }}" download>Download PDF</a>)
+                </li>
+            </ul>
+            <button class="open-modal" data-modal="modalRemovalPremises">Preview Form</button>
+            <!-- Modal -->
+            <div id="modalRemovalPremises" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <embed src="{{ url_for('static', filename='files/removal_of_premises_form.pdf') }}" type="application/pdf" width="100%" height="600px" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Revised Fee Structure -->
+    <div class="service">
+        <button class="collapsible">Revised Fee Structure</button>
+        <div class="content">
+            <ul>
+                <li>View the Revised Fee Structure:
+                    (<a href="{{ url_for('static', filename='files/revised_fee_structure_final.pdf') }}" download>Download PDF</a>)
+                </li>
+            </ul>
+            <button class="open-modal" data-modal="modalFeeStructure">Preview Document</button>
+            <!-- Modal -->
+            <div id="modalFeeStructure" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <embed src="{{ url_for('static', filename='files/revised_fee_structure_final.pdf') }}" type="application/pdf" width="100%" height="600px" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+{% endblock %}

@@ -1,0 +1,380 @@
+{% extends "base.html" %}
+{% block title %}Changed{% endblock %}
+
+{% block content %}
+
+<!-- Video Loop Section -->
+<section class="video_loop">
+  <video autoplay muted loop id="header-video">
+    <source src="{{ url_for('static', filename='videos/video.mp4') }}" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div class="video-overlay">
+    <div class="text-box">
+      <h1>Welcome to the Port Of Spain City Corporation</h1>
+      <p>Is the Municipal Authority of the City of Port of Spain.<br> It is charged with providing local services geared
+        towards improving the quality of life of burgesses of the city and the thousands of transient population.</p>
+      <a href="{{ url_for('views.about') }}" class="hero-btn">Visit Us To Know More</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- About Section -->
+<section class="about-section">
+  <div class="about-content">
+      <h1>About Us</h1>
+      <p>The Port of Spain City Corporation (POSCC) is the municipal authority responsible for 
+      the capital city of Port of Spain in Trinidad and Tobago. The organization provides local 
+      services that are targeted towards improving the quality of life of persons within the city.   
+      These services include sanitation, infrastructure, development, and maintenance of 
+      public health.</p>
+      
+      <h2>Boundaries</h2>
+      <p>The City's boundaries span from the sea in the south to the foothills of the Northern Range; 
+      in the west from the Cocorite Walkover, along Fort George Road into Long Circular Road, 
+      to a point just below the Trinidad Hilton.</p>
+      
+      <h2>Establishment</h2>
+      <p>The Port of Spain Corporation (POSC) is the municipal authority of Port of Spain,
+      proclaimed by the then Governor on June 25, 1914, established by the Legislative
+      Council on June 26, 1914, and continued over time by various acts of Parliament, the
+      most recent being the Municipal Corporations Act No. 21 of 1990 (MCA).</p>
+  </div>
+
+  <div class="about-links">
+      <div class="link-item">
+        <a href="{{ url_for('views.about') }}#vision">
+          <img src="{{ url_for('static', filename='images/building_1.jpg') }}" alt="History">
+      </a>
+          <h3>Vision</h3>
+      </div>
+      <div class="link-item">
+        <a href="{{ url_for('views.about') }}#mission">
+          <img src="{{ url_for('static', filename='images/building_2.jpg') }}" alt="History">
+      </a>
+          <h3>Mission</h3>
+      </div>
+  </div>
+</section>
+
+<!-- Our Services Section -->
+  <section class="services">
+  <h1>Our Services</h1>
+  <p>The Port of Spain City Corporation provides a wide range of services to maintain and enhance the city’s
+    infrastructure and environment.</p>
+
+    <div class="services-row">
+      <div class="services-col">
+        <img src="{{ url_for('static', filename='images/red_house.png') }}" alt="Building Maintenance">
+        <div class="title-overlay">
+          <h3>Provision and Maintenance of Corporation Buildings</h3>
+        </div>
+        <div class="layer">
+          <h3>Provision and Maintenance of Corporation Buildings</h3>
+        </div>
+      </div>
+      <div class="services-col">
+        <img src="{{ url_for('static', filename='images/drain.jpeg') }}" alt="Drain Maintenance">
+        <div class="title-overlay">
+          <h3>Construction and Maintenance of Drains and Watercourses</h3>
+        </div>
+        <div class="layer">
+          <h3>Construction and Maintenance of Drains and Watercourses</h3>
+        </div>
+      </div>
+      <div class="services-col">
+        <img src="{{ url_for('static', filename='images/woodbrook_park.jpg') }}" alt="Parks and Public Spaces">
+        <div class="title-overlay">
+          <h3>Maintenance and Control of Parks and Public Spaces</h3>
+        </div>
+        <div class="layer">
+          <h3>Maintenance and Control of Parks and Public Spaces</h3>
+        </div>
+      </div>
+      <div class="services-col">
+        <img src="{{ url_for('static', filename='images/wrightson_road.jpg') }}" alt="Infrastructure Development">
+        <div class="title-overlay">
+          <h3>Infrastructure Development</h3>
+        </div>
+        <div class="layer">
+          <h3>Infrastructure Development</h3>
+        </div>
+      </div>
+      <div class="services-col">
+        <img src="{{ url_for('static', filename='images/garbage_disposal.jpeg') }}" alt="Garbage Disposal">
+        <div class="title-overlay">
+          <h3>Garbage Disposal</h3>
+        </div>
+        <div class="layer">
+          <h3>Garbage Disposal</h3>
+        </div>
+      </div>
+      <div class="services-col">
+        <img src="{{ url_for('static', filename='images/vector_control.jpeg') }}" alt="Vector Control">
+        <div class="title-overlay">
+          <h3>Chemical Treatment for Insect and Vector Control</h3>
+        </div>
+        <div class="layer">
+          <h3>Chemical Treatment for Insect and Vector Control</h3>
+        </div>
+      </div>
+      <div class="services-col">
+        <img src="{{ url_for('static', filename='images/pos_general_hospital.jpg') }}" alt="Public Health">
+        <div class="title-overlay">
+          <h3>Public Nuisance Abatement and Primary Health Care</h3>
+        </div>
+        <div class="layer">
+          <h3>Public Nuisance Abatement and Primary Health Care</h3>
+        </div>
+      </div>
+      <div class="services-col">
+        <img src="{{ url_for('static', filename='images/environment.jpg') }}" alt="Environmental Maintenance">
+        <div class="title-overlay">
+          <h3>Environmental Maintenance and Watercourse Monitoring</h3>
+        </div>
+        <div class="layer">
+          <h3>Environmental Maintenance and Watercourse Monitoring</h3>
+        </div>
+      </div>
+      <div class="services-col">
+        <img src="{{ url_for('static', filename='images/water_distribution.jpeg') }}" alt="Water Distribution">
+        <div class="title-overlay">
+          <h3>Truck Borne Water Distribution</h3>
+        </div>
+        <div class="layer">
+          <h3>Truck Borne Water Distribution</h3>
+        </div>
+      </div>
+      <div class="services-col">
+        <img src="{{ url_for('static', filename='images/litter_wardens.jpg') }}" alt="Litter Prevention">
+        <div class="title-overlay">
+          <h3>Enforcement of the Litter Act</h3>
+        </div>
+        <div class="layer">
+          <h3>Enforcement of the Litter Act</h3>
+        </div>
+      </div>
+      <div class="services-col">
+        <img src="{{ url_for('static', filename='images/cesspit_cleaning.jpeg') }}" alt="Cesspit Cleaning">
+        <div class="title-overlay">
+          <h3>Cesspit Cleaning</h3>
+        </div>
+        <div class="layer">
+          <h3>Cesspit Cleaning</h3>
+        </div>
+      </div>
+      <div class="services-col">
+        <img src="{{ url_for('static', filename='images/food_badge.jpeg') }}" alt="Food Badges">
+        <div class="title-overlay">
+          <h3>Supply of Food Badges</h3>
+        </div>
+        <div class="layer">
+          <h3>Supply of Food Badges</h3>
+        </div>
+      </div>
+      <div class="services-col">
+        <img src="{{ url_for('static', filename='images/markets.jpg') }}" alt="Market Maintenance">
+        <div class="title-overlay">
+          <h3>Market Maintenance and Control</h3>
+        </div>
+        <div class="layer">
+          <h3>Market Maintenance and Control</h3>
+        </div>
+      </div>
+      <div class="services-col">
+        <img src="{{ url_for('static', filename='images/cemetery.jpg') }}" alt="Burial Grounds">
+        <div class="title-overlay">
+          <h3>Maintenance of Burial Grounds and Crematorium</h3>
+        </div>
+        <div class="layer">
+          <h3>Maintenance of Burial Grounds and Crematorium</h3>
+        </div>
+      </div>
+  </div>
+  </section>
+
+
+
+<!-- Departments Section-->
+<section class="departments-section">
+  <div class="container">
+    <h1>Explore Our Departments</h1>
+    <div class="departments-row">
+      <!-- Communication Department -->
+      <div class="department-card">
+        <a href="{{ url_for('views.departments') }}" class="icon-link">
+          <i class="fas fa-bullhorn department-icon"></i> <!-- Communication Icon -->
+        </a>
+        <div class="department-content">
+          <h2>Communication</h2>
+          <p>The Communications Department is a strategic hub dedicated to enhancing internal and external communication efforts...</p>
+          <a href="{{ url_for('views.departments') }}" class="learn-more">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Procurement Department -->
+      <div class="department-card">
+        <a href="{{ url_for('views.procurement') }}" class="icon-link">
+          <i class="fas fa-shopping-cart department-icon"></i> <!-- Procurement Icon -->
+        </a>
+        <div class="department-content">
+          <h2>Procurement</h2>
+          <p>The Procurement Department plays an integral part of the corporation and is crucial in the purchasing process...</p>
+          <a href="{{ url_for('views.procurement') }}" class="learn-more">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Public Health Department -->
+      <div class="department-card">
+        <a href="{{ url_for('views.publicHealth') }}" class="icon-link">
+          <i class="fas fa-medkit department-icon"></i> <!-- Public Health Icon -->
+        </a>
+        <div class="department-content">
+          <h2>Public Health</h2>
+          <p>The Public Health Department is led by the Principal Medical and Health Officer (PMHO) and focuses on public health initiatives...</p>
+          <a href="{{ url_for('views.publicHealth') }}" class="learn-more">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Local Economic Development Department -->
+      <div class="department-card">
+        <a href="{{ url_for('views.led') }}" class="icon-link">
+          <i class="fas fa-chart-line department-icon"></i> <!-- Local Economic Development Icon -->
+        </a>
+        <div class="department-content">
+          <h2>Local Economic Development</h2>
+          <p>The LED Department works towards the economic development of the region, helping to achieve sustainable growth...</p>
+          <a href="{{ url_for('views.led') }}" class="learn-more">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Building Inspectorate -->
+      <div class="department-card">
+        <a href="{{ url_for('views.cityAssessors') }}" class="icon-link">
+          <i class="fas fa-building department-icon"></i> <!-- Building Inspectorate Icon -->
+        </a>
+        <div class="department-content">
+          <h2>Building Inspectorate</h2>
+          <p>The Building Inspectorate unit is responsible for development planning and control within the region...</p>
+          <a href="{{ url_for('views.cityAssessors') }}" class="learn-more">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Technical/Transport Department -->
+      <div class="department-card">
+        <a href="{{ url_for('views.departments') }}" class="icon-link">
+          <i class="fas fa-tools department-icon"></i> <!-- Technical/Transport Icon -->
+        </a>
+        <div class="department-content">
+          <h2>Technical/Transport</h2>
+          <p>The Technical/Transport Department is a crucial component within the organization, managing and maintaining transport infrastructure...</p>
+          <a href="{{ url_for('views.departments') }}" class="learn-more">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Disaster Management Department -->
+      <div class="department-card">
+        <a href="{{ url_for('views.disasterManagement') }}" class="icon-link">
+          <i class="fas fa-exclamation-triangle department-icon"></i> <!-- Disaster Management Icon -->
+        </a>
+        <div class="department-content">
+          <h2>Disaster Management</h2>
+          <p>The Disaster Management Unit is responsible for implementing strategies to mitigate, prepare for, respond to, and recover from disasters...</p>
+          <a href="{{ url_for('views.disasterManagement') }}" class="learn-more">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Municipal Police Department -->
+      <div class="department-card">
+        <a href="{{ url_for('views.cityPolice') }}" class="icon-link">
+          <i class="fas fa-balance-scale department-icon"></i> <!-- Municipal Police Icon -->
+        </a>
+        <div class="department-content">
+          <h2>Municipal Police</h2>
+          <p>The Municipal Police Department is responsible for maintaining public safety and enforcing laws within the specific municipality...</p>
+          <a href="{{ url_for('views.cityPolice') }}" class="learn-more">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Information Section -->
+
+<section class="info-section">
+  <div class="info-header">
+    <h1>Stay Informed</h1>
+    <p>Explore the latest news, events, and frequently asked questions to stay updated with the activities and happenings within the Port of Spain City Corporation.</p>
+  </div>
+  
+  <div class="info-container">
+    <div class="info-item">
+      <img src="{{ url_for('static', filename='images/news_and_announcements.jpeg') }}" alt="News Announcements">
+      <h2>News/Announcements</h2>
+      <p>Keep updated and informed of what is happening within your regional corporation.</p>
+      <a href="#" class="info-btn">
+        <i class="fas fa-external-link-alt"></i> Read More
+      </a>
+    </div>
+
+    <div class="info-item">
+      <img src="{{ url_for('static', filename='images/events.jpeg') }}" alt="Events">
+      <h2>Events</h2>
+      <p>Events are a powerful way to bring people together, create memorable experiences, and achieve specific goals.</p>
+      <a href="#" class="info-btn">
+        <i class="fas fa-external-link-alt"></i> Read More
+      </a>
+    </div>
+
+    <div class="info-item">
+      <img src="{{ url_for('static', filename='images/FAQs.jpeg') }}" alt="FAQs">
+      <h2>FAQs</h2>
+      <p>Questions can unlock knowledge and provide tips to help you frame inquiries that lead to insightful answers.</p>
+      <a href="#" class="info-btn">
+        <i class="fas fa-external-link-alt"></i> Read More
+      </a>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Council Section-->
+
+<section class="council-section">
+  <div class="council-header">
+    <h1>Meet The Council</h1>
+    <p>Introducing the POSCC Council, a dedicated assembly focused on fostering collaboration, innovation, and sustainable growth across our diverse communities.</p>
+    <a href="#" class="read-more-btn">Read more</a>
+  </div>
+  
+  <div class="council-members">
+    <div class="council-member">
+      <img src="{{ url_for('static', filename='images/mayor.jpeg') }}" alt="Chinua Allayne" class="member-photo">
+      <h2>Chinua Allayne</h2>
+      <p class="member-title">Mayor</p>
+      <p class="member-description">He has assured the public he will make them proud and added that young people can successfully lead TT.</p>
+      <div class="social-links">
+        <a href="#" class="social-icon">Facebook Icon</a>
+        <!-- Add other social icons here -->
+      </div>
+    </div>
+
+    <div class="council-member">
+      <img src="{{ url_for('static', filename='images/deputy-mayor.jpeg') }}" alt="Abena Hartley" class="member-photo">
+      <h2>Abena Hartley</h2>
+      <p class="member-title">Deputy Mayor</p>
+      <p class="member-description">The vice-chairman of a council serves as the deputy to the chairman, supporting in leadership responsibilities and presiding over meetings in the absence of the chairman.</p>
+      <div class="social-links">
+        <a href="#" class="social-icon">Facebook Icon</a>
+        <!-- Add other social icons here -->
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+{% endblock %}

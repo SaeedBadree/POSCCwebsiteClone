@@ -1,0 +1,202 @@
+{% extends "base.html" %}
+
+{% block title %}Our Services - POSCC{% endblock %}
+
+{% block content %}
+    <!-- Services Header Section -->
+    <section class="services-header">
+        <div class="services-header-content">
+            <h1>Our Services</h1>
+            <h2>The Port of Spain City Corporation provides a wide range of services to maintain and enhance the city’s infrastructure and environment.</h2>
+        </div>
+    </section>
+
+    <!-- Services Content Section -->
+    <section class="services-content">
+        <div class="services-row">
+            <!-- Card 1 -->
+            <div class="service-card">
+                <div class="service-card-inner">
+                    <div class="service-card-front">
+                        <img src="{{ url_for('static', filename='images/buildings.jpeg') }}" alt="Building Maintenance">
+                        <h3>Provision and Maintenance of Corporation Buildings</h3>
+                    </div>
+                    <div class="service-card-back">
+                        <p>We ensure that all Corporation buildings are well-maintained, secure, and functional to support the services offered to the public.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="service-card">
+                <div class="service-card-inner">
+                    <div class="service-card-front">
+                        <img src="{{ url_for('static', filename='images/drain.jpeg') }}" alt="Drain Maintenance">
+                        <h3>Construction and Maintenance of Drains and Watercourses</h3>
+                    </div>
+                    <div class="service-card-back">
+                        <p>We handle the construction and maintenance of all drains and watercourses within the municipality, ensuring proper drainage and reducing flood risks.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="service-card">
+                <div class="service-card-inner">
+                    <div class="service-card-front">
+                        <img src="{{ url_for('static', filename='images/parks.jpeg') }}" alt="Parks and Public Spaces">
+                        <h3>Maintenance and Control of Parks and Public Spaces</h3>
+                    </div>
+                    <div class="service-card-back">
+                        <p>We maintain and oversee parks, recreation grounds, and other public spaces, ensuring they are safe, clean, and accessible to all citizens.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="service-card">
+                <div class="service-card-inner">
+                    <div class="service-card-front">
+                        <img src="{{ url_for('static', filename='images/infrastructure_development.jpeg') }}" alt="Infrastructure Development">
+                        <h3>Infrastructure Development</h3>
+                    </div>
+                    <div class="service-card-back">
+                        <p>Our team focuses on infrastructure development within the Municipality, in accordance with plans approved by the Minister of Physical Planning.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="service-card">
+                <div class="service-card-inner">
+                    <div class="service-card-front">
+                        <img src="{{ url_for('static', filename='images/garbage_disposal.jpeg') }}" alt="Garbage Disposal">
+                        <h3>Garbage Disposal</h3>
+                    </div>
+                    <div class="service-card-back">
+                        <p>We provide efficient garbage disposal services from public and private properties to maintain a clean and healthy environment.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="service-card">
+                <div class="service-card-inner">
+                    <div class="service-card-front">
+                        <img src="{{ url_for('static', filename='images/vector_control.jpeg') }}" alt="Vector Control">
+                        <h3>Chemical Treatment for Insect and Vector Control</h3>
+                    </div>
+                    <div class="service-card-back">
+                        <p>We conduct chemical treatments to control insects and vectors, reducing health risks and improving the overall quality of life.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 7 -->
+            <div class="service-card">
+                <div class="service-card-inner">
+                    <div class="service-card-front">
+                        <img src="{{ url_for('static', filename='images/healthcare.jpeg') }}" alt="Public Health">
+                        <h3>Public Nuisance Abatement and Primary Health Care</h3>
+                    </div>
+                    <div class="service-card-back">
+                        <p>We work to abate public nuisances and provide primary health care services, ensuring the well-being of the city's residents.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 8 -->
+            <div class="service-card">
+                <div class="service-card-inner">
+                    <div class="service-card-front">
+                        <img src="{{ url_for('static', filename='images/environment.jpg') }}" alt="Environmental Maintenance">
+                        <h3>Environmental Maintenance and Watercourse Monitoring</h3>
+                    </div>
+                    <div class="service-card-back">
+                        <p>Our team is dedicated to maintaining the physical environment and monitoring watercourses to prevent environmental degradation.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 9 -->
+            <div class="service-card">
+                <div class="service-card-inner">
+                    <div class="service-card-front">
+                        <img src="{{ url_for('static', filename='images/water_distribution.jpeg') }}" alt="Water Distribution">
+                        <h3>Truck Borne Water Distribution</h3>
+                    </div>
+                    <div class="service-card-back">
+                        <p>We manage the distribution of truck-borne water, ensuring that residents have access to clean water as per the Water and Sewage Act.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 10 -->
+            <div class="service-card">
+                <div class="service-card-inner">
+                    <div class="service-card-front">
+                        <img src="{{ url_for('static', filename='images/litter_wardens.jpg') }}" alt="Litter Prevention">
+                        <h3>Enforcement of the Litter Act</h3>
+                    </div>
+                    <div class="service-card-back">
+                        <p>We enforce the Litter Act through our Litter Prevention Wardens, helping to keep the city clean and litter-free.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 11 -->
+            <div class="service-card">
+                <div class="service-card-inner">
+                    <div class="service-card-front">
+                        <img src="{{ url_for('static', filename='images/cesspit_cleaning.jpeg') }}" alt="Cesspit Cleaning">
+                        <h3>Cesspit Cleaning</h3>
+                    </div>
+                    <div class="service-card-back">
+                        <p>Our team provides cesspit cleaning services to ensure proper sanitation and prevent environmental contamination.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 12 -->
+            <div class="service-card">
+                <div class="service-card-inner">
+                    <div class="service-card-front">
+                        <img src="{{ url_for('static', filename='images/food_badge.jpeg') }}" alt="Food Badges">
+                        <h3>Supply of Food Badges</h3>
+                    </div>
+                    <div class="service-card-back">
+                        <p>We issue food badges to vendors, ensuring they meet the required health and safety standards for food handling.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 13 -->
+            <div class="service-card">
+                <div class="service-card-inner">
+                    <div class="service-card-front">
+                        <img src="{{ url_for('static', filename='images/markets.jpg') }}" alt="Market Maintenance">
+                        <h3>Market Maintenance and Control</h3>
+                    </div>
+                    <div class="service-card-back">
+                        <p>We maintain and regulate the city’s markets, ensuring they are clean, safe, and conducive for business.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 14 -->
+            <div class="service-card">
+                <div class="service-card-inner">
+                    <div class="service-card-front">
+                        <img src="{{ url_for('static', filename='images/cemetery.jpg') }}" alt="Burial Grounds">
+                        <h3>Maintenance of Burial Grounds and Crematorium</h3>
+                    </div>
+                    <div class="service-card-back">
+                        <p>We are responsible for the upkeep and control of burial grounds and the crematorium, providing respectful and dignified services.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+
