@@ -3,8 +3,9 @@
 {% block title %}Contact Us - Port of Spain City Corporation{% endblock %}
 
 {% block content %}
-
 <div class="contact-section">
+
+    <!-- Header Image & Title -->
     <div class="contact-header">
         <img src="{{ url_for('static', filename='images/red_house.png') }}" alt="Contact Us Header">
         <div class="contact-title-overlay">
@@ -12,6 +13,7 @@
         </div>
     </div>
 
+    <!-- Contact Info, Map & Hours -->
     <div class="map-and-info">
         <div class="hours">
             <h2>Hours of Operation</h2>
@@ -30,9 +32,10 @@
 
         <div class="contact-info">
             <h2>Information</h2>
-            <p><strong>Phone:</strong> +1 868-123-4567</p>
+            <p><strong>Telephone:</strong> (868) 299-0870</p>
+            <p><strong>Fax:</strong> (868) 623-1125</p>
             <p><strong>Email:</strong> contact@poscc.gov.tt</p>
-            <p><strong>Address:</strong> 2-4 Knox St, Port of Spain, Trinidad & Tobago</p>
+            <p><strong>Address:</strong> 2-4 Knox Street, Port of Spain, Trinidad & Tobago</p>
             <div class="social-icons">
                 <a href="#"><i class="fa fa-facebook"></i></a>
                 <a href="#"><i class="fa fa-twitter"></i></a>
@@ -41,38 +44,135 @@
         </div>
     </div>
 
+    <!-- Directory -->
     <div class="directory-section">
         <h2>Directory</h2>
         <div class="directory-grid">
+
             <div class="directory-item">
-                <h3>Councillors</h3>
+                <h3>Office of the Mayor</h3>
                 <ul>
-                    <li>John Doe - Mayor</li>
-                    <li>Jane Doe - Deputy Mayor</li>
+                    <li>Mayor – Ext. 2224</li>
+                    <li>Secretary to the Mayor – Ext. 2223</li>
+                    <li>Deputy Mayor – Ext. 2336 / 2236</li>
+                    <li>Communications Officer – Ext. 2237</li>
                 </ul>
             </div>
+
             <div class="directory-item">
-                <h3>Administrative</h3>
+                <h3>Administration & CEO</h3>
                 <ul>
-                    <li>Administration Department: +1 868-123-4567</li>
-                    <li>Finance Department: +1 868-123-4568</li>
+                    <li>CEO – Ext. 2215</li>
+                    <li>Deputy CEO – Ext. 2216</li>
+                    <li>Corporate Secretary – Ext. 2296</li>
+                    <li>Admin Officer II – Ext. 2267</li>
+                    <li>Tenders Clerk – Ext. 2210</li>
+                    <li>Operator – Ext. 2000</li>
                 </ul>
             </div>
+
             <div class="directory-item">
-                <h3>Public Health/Building Inspectorate</h3>
+                <h3>I.T. Department</h3>
                 <ul>
-                    <li>Public Health: +1 868-123-4569</li>
-                    <li>Building Inspectorate: +1 868-123-4570</li>
+                    <li>Database Admin – Ext. 2401</li>
+                    <li>Help Desk I–VI – Ext. 2402 to 2408</li>
+                    <li>I.T. Clerk – Ext. 2406</li>
                 </ul>
             </div>
+
             <div class="directory-item">
-                <h3>Other</h3>
+                <h3>City Police Department</h3>
                 <ul>
-                    <li>Other Department: +1 868-123-4571</li>
+                    <li>Superintendent – Ext. 2804</li>
+                    <li>Task Force Room – Ext. 2811</li>
+                    <li>Lobby / Security – Ext. 2810</li>
+                    <li>Police Wrecking – 290-3608</li>
                 </ul>
             </div>
+
+            <div class="directory-item">
+                <h3>City Engineering</h3>
+                <ul>
+                    <li>City Engineer – Ext. 2700</li>
+                    <li>Engineer Assistants – Ext. 2706, 2714</li>
+                    <li>Maintenance – Ext. 2730</li>
+                    <li>Stores – Ext. 2721–2724</li>
+                </ul>
+            </div>
+
+            <div class="directory-item">
+                <h3>City Treasurer</h3>
+                <ul>
+                    <li>Cashier – Ext. 2101</li>
+                    <li>Accountant III – Ext. 2122</li>
+                    <li>Paymaster – Ext. 2107</li>
+                    <li>Check Staff – Ext. 2103/2104</li>
+                </ul>
+            </div>
+
+            <div class="directory-item">
+                <h3>Public Health</h3>
+                <ul>
+                    <li>CMOH – Ext. 2513</li>
+                    <li>Inspectorate – Ext. 2500 to 2505</li>
+                    <li>Clinic / Nurses – Ext. 2512 to 2516</li>
+                    <li>General Office – Ext. 2506</li>
+                    <li>Education – Ext. 2517</li>
+                </ul>
+            </div>
+
+            <div class="directory-item">
+                <h3>PABX Access Codes</h3>
+                <ul>
+                    <li>*69 – Audit</li>
+                    <li>*81 – I.T. Department</li>
+                    <li>*82 – Administration</li>
+                    <li>*83 – Treasurer</li>
+                    <li>*84 – HR</li>
+                    <li>*85 – Engineering</li>
+                    <li>*86 – Public Health</li>
+                    <li>*87 – City Police</li>
+                    <li>*88 – Assessment</li>
+                    <li>*91 – Stores</li>
+                </ul>
+            </div>
+
+            <div class="directory-item">
+                <h3>Institutions</h3>
+                <ul>
+                    <li><strong>Markets:</strong></li>
+                    <li>Central Market – 623-6807 or Ext. 6204</li>
+                    <li>Market Police Post – 623-6728 or Ext. 6200</li>
+                    <li>St. James Market – 622-6148 or Ext. 6148 / 6149</li>
+                    <li>Public Health Market – 6800</li>
+
+                    <li><strong>Transport & Cleansing:</strong></li>
+                    <li>Superintendent – 622-2621</li>
+                    <li>General Office – 622-3943 or Ext. 6103</li>
+                    <li>Foreman (Garage) – 622-2096 or Ext. 6101</li>
+                    <li>Foreman II – Ext. 6102</li>
+                    <li>Supervisor (Garage) – Ext. 6100</li>
+
+                    <li><strong>Divisions:</strong></li>
+                    <li>Central – 623-1054 or Ext. 4000</li>
+                    <li>Eastern – 623-7084 or Ext. 6002 / 6003</li>
+                    <li>St. James – 622-1983 Ext. 6149</li>
+                    <li>Western – 628-4591 or Ext. 6801</li>
+                    <li>K9 Unit – 622-6522 or Ext. 6203</li>
+
+                    <li><strong>Abattoir:</strong> 623-4407 or Ext. 6505 / 6506</li>
+                    <li><strong>Crematorium:</strong> 628-4009 or Ext. 6400</li>
+                    <li><strong>Terre Brule:</strong> 622-8893 or Ext. 6394</li>
+
+                    <li><strong>Cemeteries:</strong></li>
+                    <li>Laperouse – 625-2775</li>
+                    <li>Woodbrook/Mucurapo – 622-3493 or Ext. 6500</li>
+                    <li>Western Cemetery – 628-1131</li>
+                </ul>
+            </div>
+
         </div>
     </div>
-</div>
 
+</div>
 {% endblock %}
